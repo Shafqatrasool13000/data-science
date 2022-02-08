@@ -1,0 +1,27 @@
+
+.aboutus-main{
+  width: 100%;
+  height: 100%;
+}
+#about-us {
+  font-style: normal;
+  /* padding: 17rem 0; */
+}
+
+#about-us .img-container{
+padding: 10rem;
+}
+
+#about-us .text-area .heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+  color: #e3e3e3;
+}
+#about-us .text-area .sub-heading {
+  margin-top: 3.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  color: #e3e3e3;
+}

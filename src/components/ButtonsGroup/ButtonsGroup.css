@@ -1,0 +1,11 @@
+.btns-group > button {
+  color: #ffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border: 2px solid #4b4c8a;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1rem 3rem;
+  text-align: center;
+}

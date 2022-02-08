@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+
+$normal-color: #ffffff;
+$color-light: #e7e7e7;
+$color-primary: #d1d1d1;
+$color-secondary: rgba(255, 255, 255, 0.06);
+$sky-gradient: linear-gradient(90.99deg, #3134db 0.83%, #009ee1 99.4%);
+$divider-color: rgba(255, 255, 255, 0.28);
+$input-border: rgba(255, 255, 255, 0.28);
+
+.data-process-btn-main{
+  font-style: normal;
+}
+.heading-primary{
+font-size: 3.2rem;
+font-weight: 600;
+line-height: 2.5rem;
+color: 
+$color-light;
+
+}
+.nav-heading {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 3rem;
+}
+
+
+
+.color-primary {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 76.69%;
+  color: var($color-light);
+
+  &--border {
+    background: $sky-gradient;
+    width: 6rem;
+    height: 0.5rem;
+    border-top: 2rem;
+    border-radius: 3rem;
+    margin-top: 2rem;
+  }
+}
+.btn-color > button {
+  color: $normal-color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border: 2px solid #3134DB;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1rem 0;
+  text-align: center;
+  min-width: 22.1rem;
+  width: 100%;
+  
+  
+}
+// Load Data Section
+.loadData-section{
+  // margin-top: 11rem;
+}
+.load-head {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 76.69%;
+  color: $color-light;
+}
+.btn-choose {
+  background: $sky-gradient;
+}
+.btn-blue {
+  background: $sky-gradient;
+  border-radius: 6px;
+  padding: 1rem 3rem;
+  color: $normal-color;
+  border: none;
+  &-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem ;
+    line-height: 76.69%;
+    color: $color-light;
+  }
+}
+.btn-save{
+  background: $sky-gradient;
+  border-radius: 22px;
+  padding: 1rem 3rem;
+  color: $normal-color;
+  border: none;
+  &-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem ;
+    line-height: 76.69%;
+    color: $color-light;
+  }
+}
+// Pipeline Section
+#pipeline {
+  font-style: normal;
+&heading{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+}
+:global{
+  .MuiButtonBase-root.MuiTab-root.MuiTab-textColorInherit{
+    font-size: 1.6rem !important;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-top: 0.5rem;
+    color:#fff !important;
+    text-transform: capitalize !important;
+  }
+}
+.tab {
+  font-size: 1.6rem !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2rem;
+  margin-top: 0.5rem;
+  color:#E7E7E7 !important;
+  text-transform: capitalize !important;
+}
+:global{
+  
+  .pipeline{
+    &.heading{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  
+    }
+  
+  
+  }
+}
+
+
+
+
+
+.select-value {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: $color-light;
+}

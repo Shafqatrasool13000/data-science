@@ -1,0 +1,13 @@
+select {
+    width: 100%;
+    padding: 1.2rem 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    background-color: #030239;
+    border-radius: 5px;
+    color: white;
+  }
