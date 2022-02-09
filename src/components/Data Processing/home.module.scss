@@ -10,6 +10,7 @@ $input-border: rgba(255, 255, 255, 0.28);
 
 .data-process-btn-main{
   font-style: normal;
+  cursor: pointer;
 }
 .heading-primary{
 font-size: 3.2rem;
@@ -54,13 +55,27 @@ $color-light;
   text-align: center;
   min-width: 22.1rem;
   width: 100%;
+  cursor: pointer;
   
   
 }
-// Load Data Section
-.loadData-section{
-  // margin-top: 11rem;
+.data-process-btns > button {
+  color: $normal-color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border: 2px solid #3134DB;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1rem 0;
+  text-align: center;
+  min-width: 22.1rem;
+  width: 100%;
+  cursor: pointer;
+  
+  
 }
+
 .load-head {
   font-style: normal;
   font-weight: 600;
@@ -77,6 +92,7 @@ $color-light;
   padding: 1rem 3rem;
   color: $normal-color;
   border: none;
+  cursor: pointer;
   &-text {
     font-style: normal;
     font-weight: 500;
@@ -90,6 +106,7 @@ $color-light;
   border-radius: 22px;
   padding: 1rem 3rem;
   color: $normal-color;
+  cursor: pointer;
   border: none;
   &-text {
     font-style: normal;
@@ -142,11 +159,19 @@ $color-light;
   }
 }
 
-
-
-
-
 .select-value {
   border: 2px solid rgba(255, 255, 255, 0.25);
   color: $color-light;
+}
+@media screen and (max-width: 768px) {
+  .data-process-btns > button {
+    padding: 1rem 1rem;
+    min-width: 15rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .data-process-btns > button {
+    padding: 1rem 2rem;
+    min-width: 0rem;
+  }
 }

@@ -1,12 +1,12 @@
 import { Container, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import s1 from '../../assets/1.svg';
-import s2 from '../../assets/2.svg';
-import s3 from '../../assets/3.svg';
-import s4 from '../../assets/4.svg';
-import s5 from '../../assets/5.svg';
-import s6 from '../../assets/6.svg';
+import s1 from '../../../assets/1.svg';
+import s2 from '../../../assets/2.svg';
+import s3 from '../../../assets/3.svg';
+import s4 from '../../../assets/4.svg';
+import s5 from '../../../assets/5.svg';
+import s6 from '../../../assets/6.svg';
 import './OurServices.css'
 const services = [{
   img: s1,

@@ -6,23 +6,22 @@ import ModelingRightSide from './ModelingRightSide';
 
 const Modeling = () => {
   return (
-    <Box mt='3rem'>
-      <Container>
+    <Container>
+        <Box mt='5.2rem'>
         <Grid container>
           <Stack direction={{ xs:'column',md:'row'  }}>
             <Grid item  md={3}  xs={12} >
               <Sidebar />
             </Grid>
             <Stack>
-
               <Grid item xs={12}  md={9}>
                 <ModelingRightSide />
               </Grid>
             </Stack>
           </Stack>
         </Grid>
-      </Container>
     </Box>
+      </Container>
   )
 
 };

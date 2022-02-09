@@ -1,24 +1,21 @@
 import './App.css';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import { Box, Container, createTheme } from '@mui/material';
+import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
-import ContactUs from './components/Contact Us/ContactUs ';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import AboutUs from './components/AboutUs/AboutUs';
-import UseCases from './components/UseCases/UseCases';
-// import Homepage from './components/Homepage/Homepage';
+import Homepage from './components/HomePage/Homepage';
+import AboutUs from './components/HomePage/AboutUs/AboutUs';
+import ContactUs from './components/HomePage/Contact Us/ContactUs ';
+import DataProcessBtns from './components/Data Processing/DataProcessBtns';
+import AuthenticateHomepage from './components/HomePage/AuthenticateHomepage';
 import Navbar from './components/Navbar/Navbar';
-import BlueLine from './components/Blue Line/BlueLine';
-import DataProcessing from './components/Data Processing/DataProcessing';
-import OurServices from './components/OurServices/OurServices';
-import Modeling from './components/Modeling/Modeling';
+import { useLocation } from 'react-router-dom';
+
 
 function App() {
+  const location=useLocation()
   const theme = createTheme({
     typography: {
       htmlFontSize: 10,
@@ -29,47 +26,30 @@ function App() {
       ].join(','),
 
     },
-    palette: {
-      primary: {
-        main: '#0052cc',
-      },
-      secondary: {
-        main: '#edf2ff',
-      },
-    },
   });
   return (
     <ThemeProvider theme={theme}>
-      <Header /> 
-       <AboutUs/>
-       <OurServices/>
-       <UseCases/>
-       <DataProcessing/>
-        <Modeling />
-     
-      {/* <Container>
-        <Router>
-          <Box mt={10}>
-            <Switch>
-              <Route exact path="/">
-                <Homepage />
-              </Route>
-              <Route exact path="/about">
-                <AboutUs />
-              </Route>
-              <Route exact path="/use-cases">
-                <UseCases />
-              </Route>
-              <Route exact path="/contact">
-                <ContactUs />
-              </Route>
-            </Switch>
-          </Box>
-        </Router>
-          {/* <SpecificKey />   */}
-      {/* </Container>   */}
-      {/* <ContactUs /> */}
-      {/* <Footer/>  */}
+      {
+        location.pathname==='/use-cases'?
+        <Navbar/>:''
+      }
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route  path="/profile">
+            <AuthenticateHomepage />
+          </Route>
+          {/* <Route exact path="/about">
+            <AboutUs />
+          </Route> */}
+          <Route exact path="/use-cases">
+            <DataProcessBtns />
+          </Route>
+          {/* <Route exact path="/contact">
+            <ContactUs />
+          </Route> */}
+        </Switch>
     </ThemeProvider>
   );
 }

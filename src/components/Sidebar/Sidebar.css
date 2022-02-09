@@ -10,10 +10,20 @@
     font-weight: 500;
     line-height: 1.5rem;
     border: 2px solid rgba(255, 255, 255, 0.08);background-color:rgba(255, 255, 255, 0.08);
-    padding: 1.3rem 3rem;    background: rgba(255, 255, 255, 0.08);
+    padding: 1.3rem 2.5rem;    background: rgba(255, 255, 255, 0.08);
     border-radius: .5rem;
     color:#FFFFFF;
 }
+@media only screen and (max-width: 550px)  {
+    .sidebar-main button{
+        padding: 1rem 1rem; 
+    }
+}
+@media screen and (max-width: 480px) {
+    .sidebar-main button{
+        padding: .5rem 0.6rem; 
+    }
+  }
     
 
     

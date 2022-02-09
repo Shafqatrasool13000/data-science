@@ -3,7 +3,7 @@ import React from 'react';
 import './Sidebar.css'
 
 const Sidebar = () => {
-  return <Box mt={{xs:'2.4rem',sm:'0rem'}} height={{lg:'100vh',xs:'100%'}} className='sidebar-main'  
+  return <Box mt={{xs:'0rem',sm:'0rem'}}  height={{lg:'100vh',xs:'100%'}} className='sidebar-main'  
   >
     <Stack direction={{xs:'row',md:'column'}} gap={2} p='2rem'>
       <button>General Models</button>

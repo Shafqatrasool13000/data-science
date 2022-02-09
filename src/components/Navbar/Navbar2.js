@@ -14,16 +14,47 @@ const Navbar = () => {
         <p className='nav-heading' >Data Science
         </p>
       </Box>
-      <ul className={styles["links"]}>
+      <ul className={styles["links"]} px='2rem'>
         <li><Link to="about">About</Link></li>
         <li><Link to="use-cases">Use Cases</Link></li>
         <li><Link to="contact">Contact</Link></li>
+        <Box display={{
+        xs:'flex',sm:'none'
+      }}
+       columnGap='2rem' rowGap='2rem'>
+        <Link to='use-cases'>
+          <button variant="contained"
+            className='save-btn'
+          >
+            Profile
+          </button>
+        </Link>
+        <button variant="contained"
+
+          className='register-btn'
+        >
+          Register
+        </button>
+      </Box>
       </ul>
-     <Link to='/profile'>
-     <button variant="contained" className='btn-blue'>
-        Profile
-      </button>
-     </Link>
+      <Box display={{
+        xs:'none',md:'flex'
+      }}  columnGap='2rem' rowGap='2rem'>
+        <Link to='use-cases'>
+          <button variant="contained"
+            className='save-btn'
+          >
+            Profile
+          </button>
+        </Link>
+        <button variant="contained"
+
+          className='register-btn'
+        >
+          Register
+        </button>
+      </Box>
+
 
       <label htmlFor="nav-toggle" className={styles["icon-burger"]}>
         <div className={styles["line"]}></div>

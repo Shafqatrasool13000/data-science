@@ -27,11 +27,25 @@
     border: none;
     color: 
     #FFFFFF;
+    cursor: pointer;
 }
 .select-model{
   width: 50%;
 }
 .select-model2{
   width: 100%;
+}
+.register-btn{
+  font-family: Poppins;
+border-radius: 2.5rem;
+background: none;
+border-radius: 2.5rem;
+cursor: pointer;
+padding: 1.3rem 5rem;
+font-size: 1.5rem;
+font-weight: 500;
+line-height: 1.2rem;
+color: #E3E3E3;
+border: 1px solid #009EE1;
 }
 

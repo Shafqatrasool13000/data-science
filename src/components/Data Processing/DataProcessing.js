@@ -10,29 +10,25 @@ import { Box } from '@mui/system';
 const DataProcessing = () => {
 
     return <Box mt='3rem'>
-
-    
-    <Container >
-        <Box>
-            <DataProcessBtns />
-        </Box>
-        <Box mt='8.7rem'>
-            <LoadData />
-        </Box>
-        <Box mt='2.3rem'>
-            <Pipeline />
-        </Box>
-        <Box mt='3rem'>
-            <Grid container columnSpacing={3} rowSpacing={3}>
-                <Grid item xs={12} md={6}>
-                    <TransformRadioButtonsGroup />
+        <Container >
+            
+            <Box mt='8.7rem'>
+                <LoadData />
+            </Box>
+            <Box mt='2.3rem'>
+                <Pipeline />
+            </Box>
+            <Box mt='3rem'>
+                <Grid container columnSpacing={3} rowSpacing={3}>
+                    <Grid item xs={12} md={6}>
+                        <TransformRadioButtonsGroup />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <MergeDatabase />
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <MergeDatabase />
-                </Grid>
-            </Grid>
-        </Box>
-    </Container>
+            </Box>
+        </Container>
     </Box>
 };
 
