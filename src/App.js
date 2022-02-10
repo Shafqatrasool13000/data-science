@@ -26,6 +26,11 @@ function App() {
       ].join(','),
 
     },
+    palette:{
+      primary:{
+        main:'#009EE1'
+      }
+    }
   });
   return (
     <ThemeProvider theme={theme}>
@@ -35,10 +40,11 @@ function App() {
       }
         <Switch>
           <Route exact path="/">
-            <Homepage />
+          <AuthenticateHomepage />
           </Route>
           <Route  path="/profile">
-            <AuthenticateHomepage />
+          <Homepage />
+           
           </Route>
           {/* <Route exact path="/about">
             <AboutUs />

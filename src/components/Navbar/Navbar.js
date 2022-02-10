@@ -19,11 +19,11 @@ const Navbar = () => {
         <li><Link to="use-cases">Use Cases</Link></li>
         <li><Link to="contact">Contact</Link></li>
       </ul>
-     <Link to='/profile'>
+    
      <button variant="contained" className='btn-blue'>
         Profile
       </button>
-     </Link>
+    
 
       <label htmlFor="nav-toggle" className={styles["icon-burger"]}>
         <div className={styles["line"]}></div>

@@ -42,7 +42,7 @@ const Footer = () => {
                     </ul>
                 </Grid>
                 <Grid item xs={12} sm={5}   lg={4}    className="section-4 ">
-                <p className='link-heading'>Social Links</p>
+                <p className='link-heading social-links'>Social Links</p>
                     <div className="footer-icons fix-height">
                        <a href=""> <img src={fb} className="footer-icon" alt="instagram" /></a>
                         <a href=""><img src={insta} className="footer-icon" alt="instagram" /></a>

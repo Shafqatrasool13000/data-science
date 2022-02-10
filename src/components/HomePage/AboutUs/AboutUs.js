@@ -2,7 +2,6 @@ import { Box, Container, Grid } from '@mui/material';
 import React from 'react';
 import aboutus from '../../../assets/aboutUs.svg'
 import BlueLine from '../../Blue Line/BlueLine';
-
 import './AboutUs.css'
 
 

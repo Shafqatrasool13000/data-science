@@ -3,8 +3,16 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 6px;
   height: 26.4rem;
-  padding: 2.5rem;
+  padding:0 2.5rem 2.5rem 2.5rem;
   overflow: auto;
+}
+.radio-transform{
+  border:  white;
+  
+}
+.MuiRadio-colorPrimary{
+  border: white;
+ 
 }
 
 /* width */
@@ -22,7 +30,7 @@
 /* Handle */
 .radio-button-main::-webkit-scrollbar-thumb {
   background: #d0d0d0;
-  border-radius: 10.5px;
+  border-radius: 10.5rem;
 }
 
 /* Handle on hover */

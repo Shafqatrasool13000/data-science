@@ -9,8 +9,7 @@ const Header = () => {
     return (
         <div id="hero-main" >
             {
-                location.pathname === '/profile' ? <Navbar2 /> :
-                    <Navbar />
+                location.pathname === '/profile' ? <Navbar /> : <Navbar2 />
             }
             <div className="hero-container">
                 <div>

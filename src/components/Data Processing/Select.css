@@ -9,5 +9,18 @@ select {
     border: 2px solid rgba(255, 255, 255, 0.25);
     background-color: #030239;
     border-radius: 5px;
-    color: white;
+    color: 
+    #9D9D9D;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    
+  }
+  
+  select >option{
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    color: 
+    #9D9D9D;
   }

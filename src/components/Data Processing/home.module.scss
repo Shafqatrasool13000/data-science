@@ -64,7 +64,7 @@ $color-light;
   font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
-  border: 2px solid #3134DB;
+  border: 2px solid rgba(255, 255, 255, 0.14); 
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.06);
   padding: 1rem 0;
@@ -72,8 +72,15 @@ $color-light;
   min-width: 22.1rem;
   width: 100%;
   cursor: pointer;
+  font-family: 
+  Raleway;
   
   
+}
+
+
+.data-process-btns > button:focus{
+  border: 2px solid #3134DB;
 }
 
 .load-head {
@@ -93,6 +100,8 @@ $color-light;
   color: $normal-color;
   border: none;
   cursor: pointer;
+  font-size: 1.5rem ;
+  line-height: 76.69%;
   &-text {
     font-style: normal;
     font-weight: 500;
@@ -102,6 +111,7 @@ $color-light;
   }
 }
 .btn-save{
+  font-family: Raleway;
   background: $sky-gradient;
   border-radius: 22px;
   padding: 1rem 3rem;

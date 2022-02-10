@@ -5,7 +5,7 @@ import './UseCase.css'
 
 const UseCase = () => {
   return (
-    <Box pb='2rem'>
+    <Box >
       <Card >
         <CardMedia
           component="img"

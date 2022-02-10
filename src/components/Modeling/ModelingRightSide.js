@@ -5,10 +5,20 @@ import ButtonGroup from '../ButtonsGroup/ButtonGroup';
 import LoadData from '../Data Processing/LoadData';
 import Select from '../Data Processing/Select';
 import RadioButtonScroll from '../RadioButtonsScroll/RadioButtonScroll';
+import TabsContainer from '../TabsContainer/TabsContainer';
 
 const ModelingRightSide = () => {
+  const tabs=['Numeric Variable','Categorical Variable','Target Variable']
+  const labels = [
+    'Penalty', 'Dual', 'Tolerance', 'C', 'Fit Intercept Scaling', 'ClassWeight', 'Solver', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
+]
   return <Box id='modeling-right-side' mt='3rem'>
     <Container>
+      <Box>
+        <h4 mt={2} className='load-head'>
+          Load Data
+        </h4>
+      </Box>
       <LoadData />
       <Box mt='3rem'>
         <h3 className='model-heading-text'>Specify Key Variables</h3>
@@ -16,6 +26,9 @@ const ModelingRightSide = () => {
           <p className='model-subheading-text'>
             Identify the different types of variable
           </p>
+        </Box>
+        <Box mt='2.3rem'>
+<TabsContainer tabs={tabs}/>
         </Box>
         <Box mt='2rem'>
           <p className='model-subheading-text'>Select the appropriate for each variable type</p>
@@ -62,36 +75,36 @@ const ModelingRightSide = () => {
       </Box>
       <Box mt='2.3rem'>
 
-      
-      <Grid  container columnSpacing={3} rowSpacing={3}>
-        <Grid item xs={12} lg={6}>
-          <Box>
-            <RadioButtonScroll />
-          </Box>
-        </Grid>
-        <Grid item xs={12} lg={6}>
-          <Box>
-            <p className='model-heading-text'>Update Parameter</p>
 
-          </Box>
-          <Box mt='3.2rem'>
-            <p className='model-subheading-text'>
-
-              Dual
-            </p>
-
-          </Box>
-          <Box mt='.9rem'>
-            <Box mt='1.2rem' className='select-model2'>
-              <Select />
+        <Grid container columnSpacing={3} rowSpacing={3}>
+          <Grid item xs={12} lg={6}>
+            <Box>
+              <RadioButtonScroll id='modeling' modelLabels={labels} />
             </Box>
-            <p className='modal-small-text line-Spacing'>Dual or primal formulation. Dual formulation is only implemented for 12 penalty with liblinear solver. Prefer dual=False when n_samples  n_features</p>
-          </Box>
-          <Box mt='2.5rem'>
-            <button className='modal-small-text submit-btn'>Submit</button>
-          </Box>
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <Box>
+              <p className='model-heading-text'>Update Parameter</p>
+
+            </Box>
+            <Box mt='3.2rem'>
+              <p className='model-subheading-text'>
+
+                Dual
+              </p>
+
+            </Box>
+            <Box mt='.9rem'>
+              <Box mt='1.2rem' className='select-model2'>
+                <Select />
+              </Box>
+              <p className='modal-small-text line-Spacing'>Dual or primal formulation. Dual formulation is only implemented for 12 penalty with liblinear solver. Prefer dual=False when n_samples  n_features</p>
+            </Box>
+            <Box mt='2.5rem'>
+              <button className='modal-small-text submit-btn'>Submit</button>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
       </Box>
 
 

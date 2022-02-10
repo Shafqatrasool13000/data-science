@@ -3,17 +3,18 @@ $btn-gradient: linear-gradient(90.99deg, #3134db 0.83%, #009ee1 99.4%);
 $color-light: #e7e7e7;
 :global {
   .btn-blue {
-    font-family: Poppins;
+    
     background: $btn-gradient;
     border-radius: 6px;
     font-style: normal;
     font-weight: 500;
     font-size: 1.6rem;
     color: $color-light;
-    padding: 1rem 2.5rem;
+    padding: 1.4rem 2.5rem;
     border-radius: 5rem;
     border: none;
     line-height: 76.69%;
+    cursor: pointer;
   }
 }
 nav {

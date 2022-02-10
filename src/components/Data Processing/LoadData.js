@@ -1,19 +1,18 @@
-import { Button, Typography } from '@mui/material';
+
+import React,{useState} from 'react';
 import { Box } from '@mui/system';
-import React from 'react';
 import styles from './home.module.scss';
 
 
 const LoadData = () => {
+    const [fileName,setFileName]=useState()
     return <Box className={styles['loadData-section']}>
-        <h4 mt={2} className={styles['load-head']}>
-            Load Data
-        </h4>
         <Box mt='2.3rem' sx={{ display: 'flex', alignItems: 'center' }} gap={2}>
-            <button variant="contained" className={styles['btn-blue']}>
-                Choose File
-            </button>
-            <p className={styles['btn-blue-text']}>No file Choose</p>
+            <label className={styles['btn-blue']}>
+               Choose File<input onChange={(event)=>setFileName(event.target.files[0].name)} type="file" style={{display: 'none'}} name="image"/>
+            </label>
+            <p className={styles['btn-blue-text']}>{fileName?fileName: 'No file Choosen'}</p>
+
         </Box>
     </Box>;
 };

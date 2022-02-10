@@ -5,6 +5,9 @@ import './DataProcessing.css'
 import RadioButtonScroll from '../RadioButtonsScroll/RadioButtonScroll';
 
 export default function TransformRadioButtonsGroup() {
+  const labels = [
+        'Concat', 'Cut', 'Group By', 'Merge Datasets', 'Melt', 'Shift', 'Pivot', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
+    ]
     
     return (
         <Box>
@@ -12,8 +15,7 @@ export default function TransformRadioButtonsGroup() {
                 Data Transformations
             </h2>
             <Box mt='2rem'>
-
-            <RadioButtonScroll/>
+            <RadioButtonScroll id='data-processing' dataLabels={labels}/>
             </Box>
         </Box>
     );

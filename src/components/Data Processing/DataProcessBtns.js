@@ -19,11 +19,15 @@ const DataProcessBtns = () => {
         title: 'output',
         component: Output
     }]
-
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        document.getElementById("process-default-btn").click();
+        document.getElementById("process-default-btn").style.border='2px solid #3134DB';
+     });
     const handleChange = (value) => {
-
+        document.getElementById('process-default-btn').style=null;
         const result = processes.find((process) => value === process.title)
         setProcessComponent(result.component)
+        
         console.log(result.title)
     }
     return (
@@ -31,7 +35,7 @@ const DataProcessBtns = () => {
             <Box className='data-process-btn-main' sx={{
                 display: 'flex', alignItems: 'center', flexDirection: 'column'
             }}>
-                <h2 className={styles['heading-primary']} variant="h3">
+                <h2 className={styles['heading-primary']} >
                     Data Processing
                 </h2>
                 <Box mt='2rem'>
@@ -40,7 +44,7 @@ const DataProcessBtns = () => {
                 <Box mt='5.2rem'>
                     <Box >
                         <Stack direction='row' spacing='1.7rem' className={styles['data-process-btns']}>
-                            <button onClick={() => handleChange('process')} >Data Processing</button><button onClick={() => handleChange('model')}>Modelling</button ><button onClick={() => handleChange('output')}>Output</button>
+                            <button id='process-default-btn'  onClick={() => handleChange('process')} >Data Processing</button><button onClick={() => handleChange('model')}>Modelling</button ><button onClick={() => handleChange('output')}>Output</button>
                         </Stack>
                     </Box>
 

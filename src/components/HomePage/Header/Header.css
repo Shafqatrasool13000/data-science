@@ -3,13 +3,14 @@
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
-  color: #ffffff;
+ 
 }
 #hero-main .hero-container {
   height: 100vh;
   display: flex;
   align-items: center;
   padding-left: 9.3rem;
+  color: #E3E3E3;
 }
 
 .hero-title {
@@ -17,6 +18,7 @@
   font-weight: 600;
   line-height: 5.5rem;
   width: 40.4rem;
+  
 }
 
 .hero-sub {

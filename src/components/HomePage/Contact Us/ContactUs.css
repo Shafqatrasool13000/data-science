@@ -7,6 +7,8 @@
 
 input[type="text"],
 textarea {
+  font-family: 
+  Poppins;
   width: 100%;
   padding: 12px 20px;
   margin: .8rem 0;
@@ -31,4 +33,5 @@ textarea {
   line-height: 1.2rem;
   color: #ffffff;
   cursor: pointer;
+  text-transform: uppercase;
 }

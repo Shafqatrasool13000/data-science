@@ -22,13 +22,14 @@ const Navbar = () => {
         xs:'flex',sm:'none'
       }}
        columnGap='2rem' rowGap='2rem'>
-        <Link to='use-cases'>
+        <Link to='/profile'>
           <button variant="contained"
             className='save-btn'
           >
             Profile
           </button>
-        </Link>
+          </Link>
+        
         <button variant="contained"
 
           className='register-btn'
@@ -40,7 +41,7 @@ const Navbar = () => {
       <Box display={{
         xs:'none',md:'flex'
       }}  columnGap='2rem' rowGap='2rem'>
-        <Link to='use-cases'>
+        <Link to='/profile'>
           <button variant="contained"
             className='save-btn'
           >

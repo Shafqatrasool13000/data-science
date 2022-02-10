@@ -1,15 +1,13 @@
-import { Grid, Tab, Tabs, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import './home.module.scss';
+import TabsContainer from '../TabsContainer/TabsContainer';
 
 
 const Pipeline = () => {
-    const [value, setValue] = React.useState(0);
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    }
-    return <Box className='pipeline' sx={{ borderBottom: 1, borderColor: 'rgba(255, 255, 255, 0.28);' }}>
+    const tabs=['Cleaning','Transformations','Calculations','Text Processing','Custom']
+    
+    return <Box className='pipeline'>
+      
         <p mt={2} style={{
            fontSize: '2rem',
            fontWeight: 600,
@@ -19,20 +17,11 @@ const Pipeline = () => {
         }} className='heading'>
             Create pipeline
         </p>
-        <Tabs value={value} textColor='common.white' onChange={handleChange} sx={{
-            color:'white',textTransform:'Captilize'
-           
-        }} >
-           <Grid container>
-
-                <Tab className='tab'  label="Cleaning" />
-                <Tab className='tab' label="Transformations" />
-                <Tab className='tab' label="Calculations" />
-                <Tab className='tab' label="Text Processing" />
-                <Tab className='tab' label="Custom" />
-          
-           </Grid>
-        </Tabs>
+        <Box mt='2.3rem'>
+            <TabsContainer tabs={tabs}/>
+            
+        
+        </Box>
     </Box>;
 };
 

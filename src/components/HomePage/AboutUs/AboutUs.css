@@ -2,10 +2,11 @@
 .aboutus-main{
   width: 100%;
   height: 100%;
+ 
 }
 #about-us {
   font-style: normal;
-  /* padding: 17rem 0; */
+  padding: 10rem 0;
 }
 
 #about-us .img-container{

@@ -15,6 +15,7 @@ const Modeling = () => {
             </Grid>
             <Stack>
               <Grid item xs={12}  md={9}>
+                
                 <ModelingRightSide />
               </Grid>
             </Stack>
