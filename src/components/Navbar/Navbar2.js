@@ -18,15 +18,19 @@ const Navbar = () => {
         <li><Link to="about">About</Link></li>
         <li><Link to="use-cases">Use Cases</Link></li>
         <li><Link to="contact">Contact</Link></li>
-        <Box display={{
+        <Box ml={{
+          xs:'1.5rem',lg:'0'
+        }} display={{
         xs:'flex',sm:'none'
       }}
-       columnGap='2rem' rowGap='2rem'>
+       columnGap={{
+        xs:'0',lg:'2rem'
+      }} rowGap='2rem'>
         <Link to='/profile'>
           <button variant="contained"
             className='save-btn'
           >
-            Profile
+            Login
           </button>
           </Link>
         
@@ -45,7 +49,7 @@ const Navbar = () => {
           <button variant="contained"
             className='save-btn'
           >
-            Profile
+            Login
           </button>
         </Link>
         <button variant="contained"

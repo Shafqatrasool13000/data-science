@@ -32,14 +32,11 @@ const services = [{
   img: s6,
   title: 'Machine Learning'
 },
-
-
 ]
 const OurServices = () => {
   return (
     <div className="our-service-main">
       <Container>
-
         <Grid container
           direction={'row'}
           columnSpacing={2}
@@ -49,8 +46,7 @@ const OurServices = () => {
             services.map((card, index) => {
               const { img, title } = card
               return (
-                <Grid item xs={12} sm={6} md={4} lg={2} key={index}
-               
+                <Grid item xs={12} sm={6} md={4} lg={2} key={index}               
                   className='service-card-main' >
                   <div className='services-content-item' >
                     <div className='img-container'>
@@ -62,13 +58,10 @@ const OurServices = () => {
                 </Grid>
               )
             }
-
             )
           }
-
         </Grid>
       </Container>
-
     </div>
   )
 };

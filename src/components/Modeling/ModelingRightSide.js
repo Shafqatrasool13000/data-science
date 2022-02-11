@@ -6,6 +6,8 @@ import LoadData from '../Data Processing/LoadData';
 import Select from '../Data Processing/Select';
 import RadioButtonScroll from '../RadioButtonsScroll/RadioButtonScroll';
 import TabsContainer from '../TabsContainer/TabsContainer';
+import ClassWeight from './ClassWeight';
+import Dual from './Dual';
 
 const ModelingRightSide = () => {
   const tabs=['Numeric Variable','Categorical Variable','Target Variable']
@@ -33,23 +35,38 @@ const ModelingRightSide = () => {
         <Box mt='2rem'>
           <p className='model-subheading-text'>Select the appropriate for each variable type</p>
           <Grid container mt={3} alignItems='center' justifyContent="space-between" spacing={3}>
-            <Grid item xs={12} md={6} lg={5}  >
+            <Grid item xs={12} md={5} lg={5}  >
               <Box sx={{
                 height: '146px', bgcolor: 'rgba(255, 255, 255, 0.13);'
               }} />
             </Grid>
-            <Grid item md={2} lg={2} sx={{
-              display: {
-                xs: 'none', lg: 'unset'
-              }, fontSize: '6rem'
-            }}  > <Box component='p' sx={{ lineHeight: 0, color: '#FFFFFF' }}>
+            <Box 
+              display= {{
+                xs: 'none', md: 'unset'
+              }} fontSize='6rem'
+            >
+            <Grid item md={2} lg={2}   > <Box component='p' sx={{ lineHeight: 0, color: '#FFFFFF' }}>
                 &#8594;
               </Box>
               <Box component='p' color='#FFFFFF'>
                 &#8592;
               </Box>
             </Grid>
-            <Grid xs={12} md={6} lg={5} item >
+            </Box>
+            <Box my='3rem' mx='auto'   display= {{
+                xs: 'unset', md: 'none'
+              }}
+               fontSize='6rem'
+            >
+            <Grid   item md={2} lg={2}   > <Box mx='auto' component='p' sx={{ lineHeight: 0, color: '#FFFFFF',marginLeft:'3rem' }}>
+            &#8593;
+              </Box>
+              <Box mx='auto' component='p' sx={{ lineHeight: 0, color: '#FFFFFF', }}>
+              &#8595;
+              </Box>
+            </Grid>
+            </Box>
+            <Grid xs={12}  md={5}  lg={5} item >
               <Box sx={{
                 height: '146px', bgcolor: 'rgba(255, 255, 255, 0.13);'
               }} />
@@ -87,19 +104,7 @@ const ModelingRightSide = () => {
               <p className='model-heading-text'>Update Parameter</p>
 
             </Box>
-            <Box mt='3.2rem'>
-              <p className='model-subheading-text'>
-
-                Dual
-              </p>
-
-            </Box>
-            <Box mt='.9rem'>
-              <Box mt='1.2rem' className='select-model2'>
-                <Select />
-              </Box>
-              <p className='modal-small-text line-Spacing'>Dual or primal formulation. Dual formulation is only implemented for 12 penalty with liblinear solver. Prefer dual=False when n_samples  n_features</p>
-            </Box>
+            <Dual/>
             <Box mt='2.5rem'>
               <button className='modal-small-text submit-btn'>Submit</button>
             </Box>

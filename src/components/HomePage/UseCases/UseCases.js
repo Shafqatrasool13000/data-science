@@ -3,6 +3,8 @@ import { Box } from '@mui/system';
 import BlueLine from '../../Blue Line/BlueLine';
 import UseCase from './UseCase';
 import './UseCase.css'
+import rectangle from '../../../assets/rectangle.svg';
+import sideLine from '../../../assets/sideLine.svg';
 
 
 export default function UseCases() {
@@ -10,9 +12,21 @@ export default function UseCases() {
   return (
 
     <Box id='usecase-main'>
-      <Box display='flex' flexDirection='column' alignItems='center' 
-      justify-content='center'
-      className='usecase-container' >
+      
+      <Box display='flex' flexDirection='column' alignItems='center'
+        justify-content='center'
+        className='usecase-container' >
+          <div className='about-us-img-container1'>
+        <img src={rectangle} alt="rectangle" />
+
+      </div>
+      <div className='about-us-img-container2'>
+        <img src={rectangle} alt="rectangle" />
+        {/* <div className='usecase-img-container'>
+                    <img src={sideLine} alt="sideLine" />
+                </div> */}
+
+      </div>
         <Box mt='10.2rem'>
           <p className='usecase-main-heading'>Use Cases</p>
         </Box>
@@ -21,21 +35,21 @@ export default function UseCases() {
         </Box>
       </Box>
       <Box mt='6rem'>
-      <Container >
-        <Grid  container justifContent='center' columnSpacing={4} rowSpacing={2}>
-          <Grid item md={6} lg={4}>
-            <UseCase />
+        <Container >
+          <Grid container justifContent='center' columnSpacing={4} rowSpacing={2}>
+            <Grid item md={6} lg={4}>
+              <UseCase />
+            </Grid>
+            <Grid item md={6} lg={4}>
+              <UseCase />
+            </Grid>
+            <Grid item md={6} lg={4}>
+              <UseCase />
+            </Grid>
           </Grid>
-          <Grid item md={6} lg={4}>
-            <UseCase />
-          </Grid>
-          <Grid item md={6} lg={4}>
-            <UseCase />
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
       </Box>
-     
+
     </Box>
 
 

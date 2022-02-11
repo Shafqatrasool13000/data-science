@@ -19,17 +19,25 @@ const Navbar = () => {
         <li><Link to="use-cases">Use Cases</Link></li>
         <li><Link to="contact">Contact</Link></li>
       </ul>
-    
+    <Box display={{xs:'none',md:'block'}} mt='0.5rem'>
      <button variant="contained" className='btn-blue'>
         Profile
       </button>
+    </Box>
     
+      <Box display='flex' alignItems='center'>
+        <Box display={{xs:'block',md:'none'}} mr='1.5rem'>
 
+      <button variant="contained" className='btn-blue'>
+        Profile
+      </button>
+        </Box>
       <label htmlFor="nav-toggle" className={styles["icon-burger"]}>
         <div className={styles["line"]}></div>
         <div className={styles["line"]}></div>
         <div className={styles["line"]}></div>
       </label>
+      </Box>
     </nav>
 
   )

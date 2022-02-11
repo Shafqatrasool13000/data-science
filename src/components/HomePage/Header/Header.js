@@ -3,6 +3,9 @@ import { useLocation } from 'react-router-dom'
 import Navbar from '../../Navbar/Navbar'
 import Navbar2 from '../../Navbar/Navbar2'
 import './Header.css'
+import sideLine from '../../../assets/sideLine.svg';
+import { Container } from '@mui/material'
+import { Box } from '@mui/system'
 const Header = () => {
     const location = useLocation()
     console.log(location.pathname);
@@ -12,6 +15,24 @@ const Header = () => {
                 location.pathname === '/profile' ? <Navbar /> : <Navbar2 />
             }
             <div className="hero-container">
+                <Box display={{
+                  xs:'none',lg:'unset'
+              }}>
+                <div className='hero-img-container'>
+                    <img src={sideLine} alt="sideLine" />
+                </div>
+                </Box>
+              <Box display={{
+                  xs:'none',lg:'unset'
+              }}>
+
+                <div className='hero-img-container1'>
+                    <img src={sideLine} alt="sideLine" />
+                </div>
+              </Box>
+
+
+
                 <div>
                     <div className='hero-title-length'>
                         <p className='hero-title'> Empowering your business with Data Science and AI Technology</p>
@@ -20,7 +41,9 @@ const Header = () => {
 
 
                 </div>
+
             </div>
+
         </div>
     )
 }

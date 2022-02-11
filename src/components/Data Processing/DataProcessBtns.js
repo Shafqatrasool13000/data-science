@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Box, Stack } from '@mui/material';
 import styles from './home.module.scss';
 import BlueLine from '../Blue Line/BlueLine';
@@ -7,6 +7,13 @@ import Modeling from '../Modeling/Modeling'
 import Output from '../Output/Output';
 
 const DataProcessBtns = () => {
+   
+    useEffect(() => {
+            document.getElementById("process-default-btn").click();
+            document.getElementById("process-default-btn").style.border='2px solid #3134DB';
+         
+      }, []);
+    
     const [processComponent, setProcessComponent] = useState('')
     const processes = [{
         title: 'process',
@@ -19,10 +26,7 @@ const DataProcessBtns = () => {
         title: 'output',
         component: Output
     }]
-    document.addEventListener("DOMContentLoaded", function(event) { 
-        document.getElementById("process-default-btn").click();
-        document.getElementById("process-default-btn").style.border='2px solid #3134DB';
-     });
+    
     const handleChange = (value) => {
         document.getElementById('process-default-btn').style=null;
         const result = processes.find((process) => value === process.title)

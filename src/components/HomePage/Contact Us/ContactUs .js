@@ -2,12 +2,20 @@ import React from 'react';
 import { Box, Container, Stack } from '@mui/material';
 import BlueLine from '../../Blue Line/BlueLine';
 import './ContactUs.css';
+import sideLine from '../../../assets/sideLine.svg';
 
 
 const ContactUs = () => {
 
     return (
-        <Box my='10rem'>
+        <Box my='10rem' className='contactus-main'>
+            <Box display={{
+                  xs:'none',lg:'unset'
+              }}>
+            <div className='contactus-img-container'>
+                    <img src={sideLine} alt="sideLine" />
+                </div>
+            </Box>
             <Container>
                 <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', mt: 3 }}>
                     <h4 className='contact-us-heading'  >Contact Us</h4>
