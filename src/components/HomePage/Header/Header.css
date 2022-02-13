@@ -4,7 +4,7 @@
   height: 100vh;
   background-size: cover;
   position: relative;
-  
+  clip-path: polygon(0% 0%, 0% 100%, 28% 100%, 29% 100%, 100% 89%, 100% 0%);
  
 }
 #hero-main .hero-container {
@@ -22,7 +22,7 @@
 }
 .hero-img-container1{
   position: absolute;
-  bottom: 5rem;
+  bottom: 8rem;
   right: 6.2rem;
  
  }
@@ -50,6 +50,11 @@
   #hero-main .hero-container {
     justify-content: center;
     padding-left: 6rem;
+  }
+  #hero-main {
+   
+    clip-path: none;
+   
   }
 }
 

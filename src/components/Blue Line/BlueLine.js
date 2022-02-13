@@ -1,7 +1,7 @@
 import './BlueLine.css'
 
 const BlueLine = () => {
-  return <p  class="below-line"></p>
+  return <p  className="below-line"></p>
 };
 
 export default BlueLine;

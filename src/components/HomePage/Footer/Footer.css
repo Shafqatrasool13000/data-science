@@ -6,6 +6,15 @@
   width: 100%;
   height: 100%;
   margin-top: 7.4rem;
+  position: relative;
+  padding: 5rem 0 0 0;
+
+}
+.footer-img-sideline{
+  position: absolute;
+  top: 12rem;
+  right: 2.8rem;
+  
 }
 
 .footer-inner {
@@ -16,7 +25,7 @@
   font-weight: 400;
   
   font-style: normal;
-  padding: 6rem 0;
+  
 }
 
 .nav-heading {
@@ -63,10 +72,7 @@ a {
   line-height: 1.5rem;
   color: #E3E3E3;
 }
-.logo-heading {
-  /* margin-bottom: 2.5rem; */
-  
-}
+
 .copyright {
   font-size: 1.4rem;
   font-weight: 400;
@@ -78,4 +84,15 @@ a {
   .social-links{
     margin-top:3rem
   }
+}
+
+@media only screen and (max-width: 480px)  {
+  .link-heading {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: #E3E3E3;
+  }
+  
 }

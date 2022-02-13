@@ -24,7 +24,7 @@ const DataProcessBtns = () => {
 
     }, {
         title: 'output',
-        component: Output
+        component: DataProcessing
     }]
     
     const handleChange = (value) => {
@@ -32,7 +32,6 @@ const DataProcessBtns = () => {
         const result = processes.find((process) => value === process.title)
         setProcessComponent(result.component)
         
-        console.log(result.title)
     }
     return (
         <Box mt='11.7rem' pb='7rem'>

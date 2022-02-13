@@ -30,7 +30,7 @@ const services = [{
 },
 {
   img: s6,
-  title: 'Machine Learning'
+  title: 'Scheduler'
 },
 ]
 const OurServices = () => {

@@ -1,19 +1,92 @@
+import React,{useState} from 'react';
 import { Container, Grid } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
 import ButtonGroup from '../ButtonsGroup/ButtonGroup';
 import LoadData from '../Data Processing/LoadData';
 import Select from '../Data Processing/Select';
-import RadioButtonScroll from '../RadioButtonsScroll/RadioButtonScroll';
+import RadioScrollModel from '../RadioButtonsScroll/RadioScrollModel';
 import TabsContainer from '../TabsContainer/TabsContainer';
-import ClassWeight from './ClassWeight';
 import Dual from './Dual';
+import ClassWeight from './ClassWeight';
+
+
+export const modelLabelContext=React.createContext();
+export const getValueContext=React.createContext();
 
 const ModelingRightSide = () => {
-  const tabs=['Numeric Variable','Categorical Variable','Target Variable']
-  const labels = [
-    'Penalty', 'Dual', 'Tolerance', 'C', 'Fit Intercept Scaling', 'ClassWeight', 'Solver', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
-]
+  const [getMyComponent,setGetMyComponent]=useState(null)
+ 
+  const dataTransforms = [
+   
+  {
+    title: 'Dual',
+    component: Dual
+
+  },
+  {
+    title: 'ClassWeight',
+    component: ClassWeight
+
+  }
+
+  ]
+
+  const getValue = (value) => {
+   
+    const result = dataTransforms.find((data) => value === data.title)
+    
+    setGetMyComponent(result.component)
+    console.log(getMyComponent)
+     
+    }
+
+  const tabs = ['Numeric Variable', 'Categorical Variable', 'Target Variable']
+  const labels = [{
+
+    check:false,title:'Penalty'
+  },
+  {
+
+    check:true,title:'Dual'
+  },
+  {
+
+    check:false,title:'ClassWeight'
+  },
+  {
+
+    check:false,title:'C'
+  },
+  {
+
+    check:false,title:'Fit Intercept Scaling'
+  },{
+
+    check:false,title:'Fit Intercept Scaling'
+  },{
+
+    check:false,title:'Fit Intercept Scaling'
+  },{
+
+    check:false,title:'Fit Intercept Scaling'
+  },{
+
+    check:false,title:'Fit Intercept Scaling'
+  },{
+
+    check:false,title:'Fit Intercept Scaling'
+  },{
+
+    check:false,title:'Fit Intercept Scaling'
+  },{
+
+    check:false,title:'Fit Intercept Scaling'
+  },{
+
+    check:false,title:'Fit Intercept Scaling'
+  },
+    // 'Penalty', 'Dual', 'Tolerance', 'C', 'Fit Intercept Scaling', 'ClassWeight', 'Solver', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
+  ]
   return <Box id='modeling-right-side' mt='3rem'>
     <Container>
       <Box>
@@ -30,7 +103,7 @@ const ModelingRightSide = () => {
           </p>
         </Box>
         <Box mt='2.3rem'>
-<TabsContainer tabs={tabs}/>
+          <TabsContainer tabs={tabs} />
         </Box>
         <Box mt='2rem'>
           <p className='model-subheading-text'>Select the appropriate for each variable type</p>
@@ -40,33 +113,33 @@ const ModelingRightSide = () => {
                 height: '146px', bgcolor: 'rgba(255, 255, 255, 0.13);'
               }} />
             </Grid>
-            <Box 
-              display= {{
+            <Box
+              display={{
                 xs: 'none', md: 'unset'
               }} fontSize='6rem'
             >
-            <Grid item md={2} lg={2}   > <Box component='p' sx={{ lineHeight: 0, color: '#FFFFFF' }}>
+              <Grid item md={2} lg={2}   > <Box component='p' sx={{ lineHeight: 0, color: '#FFFFFF' }}>
                 &#8594;
               </Box>
-              <Box component='p' color='#FFFFFF'>
-                &#8592;
-              </Box>
-            </Grid>
+                <Box component='p' color='#FFFFFF'>
+                  &#8592;
+                </Box>
+              </Grid>
             </Box>
-            <Box my='3rem' mx='auto'   display= {{
-                xs: 'unset', md: 'none'
-              }}
-               fontSize='6rem'
+            <Box my='3rem' mx='auto' display={{
+              xs: 'unset', md: 'none'
+            }}
+              fontSize='6rem'
             >
-            <Grid   item md={2} lg={2}   > <Box mx='auto' component='p' sx={{ lineHeight: 0, color: '#FFFFFF',marginLeft:'3rem' }}>
-            &#8593;
+              <Grid item md={2} lg={2}   > <Box mx='auto' component='p' sx={{ lineHeight: 0, color: '#FFFFFF', marginLeft: '3rem' }}>
+                &#8593;
               </Box>
-              <Box mx='auto' component='p' sx={{ lineHeight: 0, color: '#FFFFFF', }}>
-              &#8595;
-              </Box>
-            </Grid>
+                <Box mx='auto' component='p' sx={{ lineHeight: 0, color: '#FFFFFF', }}>
+                  &#8595;
+                </Box>
+              </Grid>
             </Box>
-            <Grid xs={12}  md={5}  lg={5} item >
+            <Grid xs={12} md={5} lg={5} item >
               <Box sx={{
                 height: '146px', bgcolor: 'rgba(255, 255, 255, 0.13);'
               }} />
@@ -96,7 +169,11 @@ const ModelingRightSide = () => {
         <Grid container columnSpacing={3} rowSpacing={3}>
           <Grid item xs={12} lg={6}>
             <Box>
-              <RadioButtonScroll id='modeling' modelLabels={labels} />
+              <modelLabelContext.Provider value={labels}>
+            <getValueContext.Provider value={getValue}>
+              <RadioScrollModel  />
+              </getValueContext.Provider>
+              </modelLabelContext.Provider>
             </Box>
           </Grid>
           <Grid item xs={12} lg={6}>
@@ -104,17 +181,13 @@ const ModelingRightSide = () => {
               <p className='model-heading-text'>Update Parameter</p>
 
             </Box>
-            <Dual/>
+           {!getMyComponent||getMyComponent==='undefined'?<Dual/>:getMyComponent}
             <Box mt='2.5rem'>
               <button className='modal-small-text submit-btn'>Submit</button>
             </Box>
           </Grid>
         </Grid>
       </Box>
-
-
-
-
     </Container>
   </Box>;;
 };

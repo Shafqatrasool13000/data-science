@@ -21,7 +21,7 @@ const Navbar = () => {
         <Box ml={{
           xs:'1.5rem',lg:'0'
         }} display={{
-        xs:'flex',sm:'none'
+        xs:'flex',md:'none'
       }}
        columnGap={{
         xs:'0',lg:'2rem'

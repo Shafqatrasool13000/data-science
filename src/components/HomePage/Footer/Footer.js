@@ -5,14 +5,23 @@ import insta from '../../../assets/insta.svg'
 import tweet from '../../../assets/tweet.svg'
 import './Footer.css'
 import { Box, Container, Divider, Grid } from '@mui/material'
+import sideLine from '../../../assets/sideLine.svg';
+
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
         <Box mt='6.5rem' id="footer-main">
             <Container>
+            <Box display={{
+                xs:'none',md:'unset'
+            }}  className='footer-img-sideline'>
+                    <img src={sideLine} alt="sideLine" />
+                </Box>
             <Grid container  columnSpacing={3} rowSpacing={3} className="footer-inner">
-                <Grid item xs={12} sm={5}   lg={4}     className="section-1 ">
+                <Grid item xs={12} sm={5}   lg={4} mr={{
+                    xs:'0',lg:'12rem'
+                }}     className="section-1 ">
                     <Box  mt='4rem'  display='flex'  alignItems='center' className='logo-heading'>
                         <Link to="/">
                             <img src={logo} alt="data-science-logo" />
@@ -41,7 +50,7 @@ const Footer = () => {
                         <li> <a href="#">Terms & Condition </a> </li>
                     </ul>
                 </Grid>
-                <Grid item xs={12} sm={5}   lg={4}    className="section-4 ">
+                <Grid item xs={12} sm={5}   lg={2}    className="section-4 ">
                 <p className='link-heading social-links'>Social Links</p>
                     <div className="footer-icons fix-height">
                        <a href=""> <img src={fb} className="footer-icon" alt="instagram" /></a>
@@ -50,7 +59,7 @@ const Footer = () => {
                     </div>                  
                 </Grid>
             </Grid>
-            <Box mt='4.3rem' pb='3rem'>              
+            <Box mt='4.3rem' >              
             <Divider color='#E3E3E3' />              
             <p className='copyright'>© All rights reserved.</p>
             </Box>

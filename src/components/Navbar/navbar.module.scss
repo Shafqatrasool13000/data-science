@@ -118,15 +118,15 @@ nav .icon-burger .line {
     margin-top: 0.5rem;
     display: block;
   }
-  nav :checked ~ .icon-burger .line:nth-child(1) {
-    transform: translateY(7px) rotate(225deg);
-  }
-  nav :checked ~ .icon-burger .line:nth-child(3) {
-    transform: translateY(-10px) rotate(-225deg);
-  }
-  nav :checked ~ .icon-burger .line:nth-child(2) {
-    opacity: 0;
-  }
+  // nav :checked ~ .icon-burger .line:nth-child(1) {
+  //   transform: translateY(7px) rotate(225deg);
+  // }
+  // nav :checked ~ .icon-burger .line:nth-child(3) {
+  //   transform: translateY(-10px) rotate(-225deg);
+  // }
+  // nav :checked ~ .icon-burger .line:nth-child(2) {
+  //   opacity: 0;
+  // }
   :global {
     .btn-blue {
       

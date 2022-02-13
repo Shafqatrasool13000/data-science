@@ -11,10 +11,10 @@ const TabsContainer = ({ tabs }) => {
     }
     return (
         <Box>
-        <Tabs value={value} indicatorColor='primary' variant="scrollable"  textColor='none' onChange={handleChange} className='tabs-container' >
+        <Tabs value={value} indicatorColor='primary' variant="scrollable"  onChange={handleChange} className='tabs-container' >
             {
                 tabs.map((tab, index) => (
-                    <Tab className='tab'  key={index} label={tab} />
+                    <Tab style={{color:'#e7e7e7'}} className='tab'  key={index} label={tab} />
                     ))
                 }
 

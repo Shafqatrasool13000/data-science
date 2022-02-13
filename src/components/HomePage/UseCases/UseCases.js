@@ -12,7 +12,6 @@ export default function UseCases() {
   return (
 
     <Box id='usecase-main'>
-      
       <Box display='flex' flexDirection='column' alignItems='center'
         justify-content='center'
         className='usecase-container' >
@@ -22,9 +21,9 @@ export default function UseCases() {
       </div>
       <div className='about-us-img-container2'>
         <img src={rectangle} alt="rectangle" />
-        {/* <div className='usecase-img-container'>
+        <div className='usecase-img-sideline'>
                     <img src={sideLine} alt="sideLine" />
-                </div> */}
+                </div>
 
       </div>
         <Box mt='10.2rem'>
