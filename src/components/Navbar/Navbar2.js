@@ -28,6 +28,9 @@ const Navbar = () => {
       }} rowGap='2rem'>
         <Link to='/profile'>
           <button variant="contained"
+          style={{
+            marginRight:'-3rem'
+          }}
             className='save-btn'
           >
             Login

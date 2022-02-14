@@ -60,8 +60,10 @@ const Footer = () => {
                 </Grid>
             </Grid>
             <Box mt='4.3rem' >              
-            <Divider color='#E3E3E3' />              
+            <Divider color='#E3E3E3' />   
+            <Box pb='2rem'>
             <p className='copyright'>© All rights reserved.</p>
+                </Box>           
             </Box>
             </Container>
         </Box>

@@ -3,7 +3,7 @@
     color:#FFFFFF;
     border: 2px solid rgba(255, 255, 255, 0.08);
 }
-.sidebar-main button{
+ .sidebar-main label{
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 500;
@@ -17,11 +17,21 @@
     font-family: Raleway;
 
 }
+.sidebar-btns > input{
+    display: none;
+    }
+    
 
-.sidebar-main button:focus{
+/* .sidebar-main button:focus{
     border: 2px solid rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.08);
-}
+} */
+
+.sidebar-main input[type="radio"]:checked+label {
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
 @media only screen and (max-width: 550px)  {
     .sidebar-main button{
         padding: 1rem 1rem; 
@@ -32,6 +42,9 @@
         padding: .5rem 0.6rem; 
     }
   }
-    
+.sidebar-default-btn{
+    background: transparent;
+    border: 2px solid transparent;
+}
 
     

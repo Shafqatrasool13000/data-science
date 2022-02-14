@@ -20,7 +20,7 @@ const RadioScrollProcess = () => {
         <FormControl >
             <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="female"
+                defaultValue="Group By"
                 name="radio-buttons-group"
             >{
                 labels.map((value, index) =>

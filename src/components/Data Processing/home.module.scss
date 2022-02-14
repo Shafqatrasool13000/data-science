@@ -59,7 +59,7 @@ $color-light;
   
   
 }
-.data-process-btns > button {
+.data-process-btns > label {
   color: $normal-color;
   font-style: normal;
   font-weight: 500;
@@ -76,6 +76,13 @@ $color-light;
   Raleway;
   
   
+}
+.data-process-btns  input[type="radio"]:checked+label { 
+  border: 2px solid #3134DB ;
+}
+
+.data-process-btns > input{
+display: none;
 }
 
 
@@ -99,7 +106,7 @@ $color-light;
 .btn-blue {
   background: $sky-gradient;
   border-radius: 6px;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   color: $normal-color;
   border: none;
   cursor: pointer;
@@ -113,22 +120,37 @@ $color-light;
     color: $color-light;
   }
 }
-.btn-save{
-  font-family: Raleway;
-  background: $sky-gradient;
-  border-radius: 22px;
-  padding: 1rem 3rem;
-  color: $normal-color;
-  cursor: pointer;
-  border: none;
-  &-text {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.5rem ;
-    line-height: 76.69%;
-    color: $color-light;
+:global{
+  .btn-save{
+    font-family: Raleway;
+    background: $sky-gradient;
+    border-radius: 22px;
+    width: 11.4rem;
+    height: 4.5rem;
+    color: $normal-color;
+    cursor: pointer;
+    border: none;
+    &-text {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.5rem ;
+      line-height: 76.69%;
+      color: $color-light;
+    }
   }
+  select:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
 }
+
 // Pipeline Section
 #pipeline {
   font-style: normal;

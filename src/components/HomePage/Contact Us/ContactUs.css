@@ -37,7 +37,8 @@ textarea {
   background: linear-gradient(90.99deg, #3134db 0.83%, #009ee1 99.4%);
   border-radius: 2.5rem;
   border: none;
-  padding: 1.3rem 5rem;
+ width: 11.4rem;
+ height: 4.5rem;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2rem;
@@ -45,3 +46,4 @@ textarea {
   cursor: pointer;
   text-transform: uppercase;
 }
+

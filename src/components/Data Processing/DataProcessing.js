@@ -10,8 +10,11 @@ import GroupBy from '../GroupBy/GroupBy';
 
 export const ProcessLabelContext = React.createContext();
 export const getProcessValueContext = React.createContext();
+
+
 const DataProcessing = () => {
-    // const [getMyComponent,setGetMyComponent]=useState(null)
+
+    let [getMyComponent, setGetMyComponent] = useState(null)
 
     const labels = [
         'Concat', 'Cut', 'Group By', 'Merge Datasets', 'Melt', 'Shift', 'Pivot', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
@@ -30,8 +33,8 @@ const DataProcessing = () => {
 
     const getProcessValue = (value) => {
         const result = dataTransforms.find((data) => value === data.title)
-        // setGetMyComponent(result.component)
-
+        console.log(result)
+        setGetMyComponent(result.component)
     }
 
     return <Box mt='3rem'>
@@ -59,7 +62,7 @@ const DataProcessing = () => {
                         </ProcessLabelContext.Provider>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                  <GroupBy />
+                        {!getMyComponent || getMyComponent === 'undefined' ? <GroupBy /> : getMyComponent}
 
                     </Grid>
                 </Grid>

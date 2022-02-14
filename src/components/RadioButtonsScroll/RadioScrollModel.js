@@ -24,14 +24,14 @@ const RadioScrollModel = () => {
         <FormControl >
             <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="female"
+                defaultValue="Dual"
                 name="radio-buttons-group"
             >{
                 labels.map((value, index) =>{
                     const {title,check}=value
                    
                     return(
-                        <FormControlLabel key={index} className='radio-label' value={title} control={<Radio  value={title} onChange={(event) => handleChange(event.target.value)} color="primary" />} sx={{
+                        <FormControlLabel key={index} className='radio-label' value={title} control={<Radio defaultValue='Dual'     name={title} defaultChecked={check} value={title} onChange={(event) => handleChange(event.target.value)} color="primary" />} sx={{
                             fontSize: '1.6rem'
                         }} label={title} />
                     )

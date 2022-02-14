@@ -1,4 +1,4 @@
-.btns-group > button {
+.btns-group > label {
   color: #ffff;
   font-style: normal;
   font-weight: 500;
@@ -11,6 +11,13 @@
   font-family: Raleway;
   cursor: pointer;
 }
-.btns-group > button:focus{
+
+.btns-group input[type="radio"]:checked+label {
   border: 2px solid #3134DB;
 }
+
+
+.btns-group > input{
+  display: none;
+  }
+  
