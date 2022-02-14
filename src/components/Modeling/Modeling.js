@@ -12,7 +12,7 @@ const Modeling = () => {
           <Stack direction={{ xs:'column',md:'row'  }}>
             <Grid item  md={3}  xs={12} mr='1rem'>
               <Box display={{
-                xs:'none',md:'unset'
+                xs:'none',sm:'unset'
               }}>
 
               <Sidebar />
