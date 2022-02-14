@@ -86,12 +86,8 @@ display: none;
 }
 
 
-.data-process-btns > button:focus{
-  border: 2px solid #3134DB;
-}
-.data-process-btns > button:active{
-  border: 2px solid #3134DB;
-}
+
+
 
 .load-head {
   font-style: normal;
@@ -199,14 +195,14 @@ display: none;
   color: $color-light;
 }
 @media screen and (max-width: 768px) {
-  .data-process-btns > button {
+  .data-process-btns > label {
     padding: 1rem 1rem;
     min-width: 15rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .data-process-btns > button {
-    padding: 1rem 2rem;
-    min-width: 0rem;
+  .data-process-btns > label {
+    padding: 0.5rem 2rem;
+    min-width: 12rem;
   }
 }
