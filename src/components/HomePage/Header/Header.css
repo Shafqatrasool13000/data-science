@@ -2,9 +2,10 @@
   background-image: url("../../../assets/banner.svg");
   background-repeat: no-repeat;
   height: 100vh;
+  max-width: 1440px;
   background-size: cover;
   position: relative;
-  clip-path: polygon(0% 0%, 0% 100%, 28% 100%, 29% 100%, 100% 89%, 100% 0%);
+  /* clip-path: polygon(0% 0%, 0% 100%, 28% 100%, 29% 100%, 100% 89%, 100% 0%); */
  
 }
 #hero-main .hero-container {

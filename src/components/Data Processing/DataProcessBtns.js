@@ -50,7 +50,7 @@ const DataProcessBtns = () => {
                 </Box>
                 <Box mt='5.2rem'>
                     <Box >
-                        <Stack direction='row' spacing='1.7rem' className={styles['data-process-btns']}>
+                        <Stack direction={{xs:'column',sm:'row'}} spacing='1.7rem' className={styles['data-process-btns']}>
                             <input type="radio" id="html" name="2" onClick={(e) => handleChange(e.target.value)} value="Data Processing" />
                             <label id='process-default-btn' for="html">Data Processing</label>
                             <input type="radio" id="css" name="2" onClick={(e) => handleChange(e.target.value)} value="Modelling" />

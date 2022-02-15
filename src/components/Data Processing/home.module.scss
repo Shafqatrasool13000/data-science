@@ -197,12 +197,14 @@ display: none;
 @media screen and (max-width: 768px) {
   .data-process-btns > label {
     padding: 1rem 1rem;
-    min-width: 15rem;
+    min-width: 23rem;
   }
 }
 @media screen and (max-width: 480px) {
   .data-process-btns > label {
-    padding: 0.5rem 2rem;
-    min-width: 12rem;
+    padding: 2rem 2rem;
+    width: 25rem;
+    
+ 
   }
 }

@@ -11,9 +11,7 @@ const Modeling = () => {
         <Grid container>
           <Stack direction={{ xs:'column',md:'row'  }}>
             <Grid item  md={3}  xs={12} mr='1rem'>
-              <Box display={{
-                xs:'none',sm:'unset'
-              }}>
+              <Box>
 
               <Sidebar />
               </Box>

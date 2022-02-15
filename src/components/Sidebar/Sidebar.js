@@ -12,9 +12,9 @@ const Sidebar = () => {
   const handleChange = () => {
     document.getElementById('sidebar-default-btn').style = null;
   }
-  return <Box mt={{ xs: '0rem', sm: '0rem' }} height={{ lg: '100vh', xs: '100%' }}  className='sidebar-main'
+  return <Box  mt={{ xs: '0rem', sm: '0rem' }} height={{ lg: '100vh', xs: '100%' }}  className='sidebar-main'
   >
-    <Stack direction={{ xs: 'row', md: 'column' }} className='sidebar-btns' gap={{
+    <Stack   direction={{ xs: 'column', sm: 'column' }} className='sidebar-btns' gap={{
       xs:'1rem',lg:'2rem'
     }} p='2rem'>
     <input type="radio" id="General Models" name="3" onClick={(e) => handleChange(e.target.value)} value="General Models" />

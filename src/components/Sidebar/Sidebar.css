@@ -17,6 +17,7 @@
     font-family: Raleway;
 
 }
+
 .sidebar-btns > input{
     display: none;
     }
@@ -27,10 +28,10 @@
     background: rgba(255, 255, 255, 0.08);
 } */
 
-/* .sidebar-main input[type="radio"]:checked+label {
+.sidebar-main input[type="radio"]:checked+label {
     border: 2px solid rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.08);
-  } */
+  }
 
 @media only screen and (max-width: 550px)  {
     .sidebar-main button{
@@ -40,6 +41,9 @@
 @media screen and (max-width: 480px) {
     .sidebar-main lable{
         padding: .5rem 0.6rem; 
+    }
+    .sidebar-btns{
+        overflow-x: scroll;
     }
   }
 

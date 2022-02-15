@@ -15,9 +15,9 @@ const Navbar = () => {
         </p>
       </Box>
       <ul className={styles["links"]}>
-        <li><Link to="about">About</Link></li>
+        <li><Link to="#">About</Link></li>
         <li><Link to="use-cases">Use Cases</Link></li>
-        <li><Link to="contact">Contact</Link></li>
+        <li><Link to="#">Contact</Link></li>
       </ul>
     <Box display={{xs:'none',md:'block'}} mt='0.5rem'>
      <button variant="contained" className='btn-blue'>
