@@ -58,11 +58,9 @@
 .services-content-item .img-container img{
   height: 5rem;
 }
-/* .slick-slide {
-  margin: 0 2rem;
-}
+
 @media screen and (max-width: 480px) {
-  .slick-slide {
-    margin: 0 0;
+  .slick-list{
+    margin-left: 2rem;
   }
-} */
+} 

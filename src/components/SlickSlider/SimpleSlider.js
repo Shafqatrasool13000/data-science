@@ -38,7 +38,6 @@ const services = [{
 export default function SimpleSlider() {
 
   var settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
@@ -75,6 +74,7 @@ export default function SimpleSlider() {
   };
   return (
   <Container>
+    
  <Slider centerPadding="2rem" arrows={false}  className="our-services-container" {...settings}>
        
        {

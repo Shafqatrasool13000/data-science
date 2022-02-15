@@ -39,7 +39,7 @@ const OurServices = () => {
     <div>
  <div className="our-service-main">
      
-     
+     <Container>
        <SimpleSlider/>
             {/* <Grid container
               direction={'row'}
@@ -65,6 +65,7 @@ const OurServices = () => {
                 )
               }
             </Grid> */}
+          </Container>
           
          
         </div>

@@ -59,6 +59,10 @@
 }
 
 @media only screen and (max-width: 480px) {
+  #hero-main .hero-container {
+    justify-content: center;
+    padding-left: 0rem;
+  }
   .hero-sub {
     width: auto;
     padding-right: 2rem;
@@ -67,7 +71,7 @@
     font-size: 4rem;
     font-weight: 600;
     line-height: 5.5rem;
-    width: 40.4rem;
+    width: 35.4rem;
   }
 
   
