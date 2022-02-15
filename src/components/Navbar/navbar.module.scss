@@ -146,15 +146,12 @@ nav .icon-burger .line {
 
 :global{
   @media screen and (max-width: 490px) {
-    av :checked ~ .navbar_icon-burger__skG1c .navbar_line__u4dLp:nth-child(1) {
-      margin-top: 2rem;
-      transform: translateY(5px) rotate(225deg);
-  }
-  .nav-heading{
-      font-size: 2.5rem;
   
-  }
-  }
+.nav-heading{
+    font-size: 2.5rem;
+
+}
+}
 }
 
 

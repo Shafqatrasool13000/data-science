@@ -15,7 +15,7 @@ import { useLocation } from 'react-router-dom';
 
 
 function App() {
-  const location=useLocation()
+  const location = useLocation()
   const theme = createTheme({
     typography: {
       htmlFontSize: 10,
@@ -26,36 +26,35 @@ function App() {
       ].join(','),
 
     },
-    palette:{
-      primary:{
-        main:'#009EE1'
+    palette: {
+      primary: {
+        main: '#009EE1'
       }
     }
   });
   return (
     <ThemeProvider theme={theme}>
       {
-        location.pathname==='/use-cases'?
-        <Navbar/>:''
+        location.pathname === '/use-cases' ?
+          <Navbar /> : ''
       }
-        <Switch>
-          <Route exact path="/">
+      <Switch>
+        <Route exact path="/">
           <AuthenticateHomepage />
-          </Route>
-          <Route  path="/profile">
+        </Route>
+        <Route path="/profile">
           <Homepage />
-           
-          </Route>
-          {/* <Route exact path="/about">
-            <AboutUs />
-          </Route> */}
-          <Route exact path="/use-cases">
-            <DataProcessBtns />
-          </Route>
-          {/* <Route exact path="/contact">
-            <ContactUs />
-          </Route> */}
-        </Switch>
+        </Route>
+        <Route exact path="/about">
+          <AboutUs />
+        </Route>
+        <Route exact path="/use-cases">
+          <DataProcessBtns />
+        </Route>
+        <Route exact path="/contact">
+          <ContactUs />
+        </Route>
+      </Switch>
     </ThemeProvider>
   );
 }

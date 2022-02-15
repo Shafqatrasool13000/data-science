@@ -5,6 +5,7 @@ import OurServices from './OurServices/OurServices';
 import UseCases from './UseCases/UseCases';
 import ContactUs from './Contact Us/ContactUs ';
 import Footer from './Footer/Footer';
+import { Box } from '@mui/system';
 
 
 
@@ -12,7 +13,7 @@ import Footer from './Footer/Footer';
 const Homepage = () => {
     return <>
         <Header />
-        <AboutUs/>
+        <AboutUs/>   
         <OurServices />
         <UseCases />
         <ContactUs />   

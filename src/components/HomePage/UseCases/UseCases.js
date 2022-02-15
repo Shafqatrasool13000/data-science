@@ -10,8 +10,11 @@ import sideLine from '../../../assets/sideLine.svg';
 export default function UseCases() {
 
   return (
-
-    <Box id='usecase-main'>
+    <div>
+          <div className='usecases-main-div' >
+   
+   </div>
+ <Box id='usecase-main'>
       <Box display='flex' flexDirection='column' alignItems='center'
         justify-content='center'
         className='usecase-container' >
@@ -26,7 +29,7 @@ export default function UseCases() {
                 </div>
 
       </div>
-        <Box mt='10.2rem'>
+        <Box>
           <p className='usecase-main-heading'>Use Cases</p>
         </Box>
         <Box mt='2.1rem'>
@@ -50,6 +53,9 @@ export default function UseCases() {
       </Box>
 
     </Box>
+    </div>
+
+    
 
 
 
