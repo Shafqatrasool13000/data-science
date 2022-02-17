@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
-import TransformRadioButtonsGroup from '../Data Processing/DataTransformRadioGroups';
+import TransformRadioButtonsGroup from '../Data Processing/PipelineDetails';
 import LoadData from '../Data Processing/LoadData';
 import Pipeline from '../Data Processing/Pipeline';
 import { Box } from '@mui/system';

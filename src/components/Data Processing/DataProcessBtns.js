@@ -4,7 +4,6 @@ import styles from './home.module.scss';
 import BlueLine from '../Blue Line/BlueLine';
 import DataProcessing from './DataProcessing';
 import Modeling from '../Modeling/Modeling'
-import Output from '../Output/Output';
 
 const DataProcessBtns = () => {
     const [processComponent, setProcessComponent] = useState('')
@@ -52,11 +51,11 @@ const DataProcessBtns = () => {
                     <Box >
                         <Stack direction={{xs:'column',sm:'row'}} spacing='1.7rem' className={styles['data-process-btns']}>
                             <input type="radio" id="html" name="2" onClick={(e) => handleChange(e.target.value)} value="Data Processing" />
-                            <label id='process-default-btn' for="html">Data Processing</label>
+                            <label id='process-default-btn' htmlFor="html">Data Processing</label>
                             <input type="radio" id="css" name="2" onClick={(e) => handleChange(e.target.value)} value="Modelling" />
-                            <label for="css">Modelling</label>
+                            <label htmlFor="css">Modelling</label>
                             <input type="radio" id="javascript" onClick={(e) => handleChange(e.target.value)} name="2" value="Output" />
-                            <label for="javascript">Output</label>
+                            <label htmlFor="javascript">Output</label>
                         </Stack>
                         {/* <Stack direction='row' spacing='1.7rem' className={styles['data-process-btns']}>
                             <button id='process-default-btn'  onClick={() => handleChange('process')} >Data Processing</button><button onClick={() => handleChange('model')}>Modelling</button ><button onClick={() => handleChange('output')}>Output</button>
@@ -67,7 +66,7 @@ const DataProcessBtns = () => {
             </Box>
 
             {
-               processComponent == 'Output' ? ( <DataProcessing/> ) :  processComponent == 'Modelling' ? ( <Modeling/> ) : processComponent == 'Data Processing' ? ( <DataProcessing/> ) : <DataProcessing/>
+               processComponent == 'Output' ? (null ) :  processComponent == 'Modelling' ? ( <Modeling/> ) : processComponent == 'Data Processing' ? ( <DataProcessing/> ) : <DataProcessing/>
             }
 
             {/* {!processComponent ? <DataProcessing /> :

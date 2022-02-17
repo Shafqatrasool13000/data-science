@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg'
 import { Box } from '@mui/material';
 import styles from './navbar.module.scss'
+import { useHistory } from 'react-router-dom';
 const Navbar = () => {
+const history=useHistory()
+  const moveToHome=()=>{
+    history.push('/work-flows/home')
+  }
   return (
     <nav>
       <input id="nav-toggle" hidden type="checkbox" />
@@ -16,11 +21,13 @@ const Navbar = () => {
       </Box>
       <ul className={styles["links"]}>
         <li><Link to="#">About</Link></li>
-        <li><Link to="use-cases">Use Cases</Link></li>
+        <li><Link to="/use-cases">Use Cases</Link></li>
+        <li><Link to="work-flows">Work Flows</Link></li>
         <li><Link to="#">Contact</Link></li>
       </ul>
     <Box display={{xs:'none',md:'block'}} mt='0.5rem'>
-     <button variant="contained" className='btn-blue'>
+    
+     <button onClick={()=>moveToHome()} variant="contained" className='btn-blue'>
         Profile
       </button>
     </Box>
@@ -28,7 +35,7 @@ const Navbar = () => {
       <Box display='flex' alignItems='center'>
         <Box display={{xs:'block',md:'none'}} mr='1.5rem'>
 
-      <button variant="contained" className='btn-blue'>
+      <button onClick={()=>moveToHome()} variant="contained" className='btn-blue'>
         Profile
       </button>
         </Box>

@@ -18,13 +18,13 @@ const Sidebar = () => {
       xs:'1rem',lg:'2rem'
     }} p='2rem'>
     <input type="radio" id="General Models" name="3" onClick={(e) => handleChange(e.target.value)} value="General Models" />
-      <label id='sidebar-default-btn' for="General Models">General Models</label>
+      <label id='sidebar-default-btn' htmlFor="General Models">General Models</label>
          <input type="radio" id="Deep Learning" name="3" onClick={(e) => handleChange(e.target.value)} value="Deep Learning" />
-      <label for="Deep Learning">Deep Learning</label>
+      <label htmlFor="Deep Learning">Deep Learning</label>
       <input type="radio" id="Correlation" onClick={(e) => handleChange(e.target.value)} name="3" value="Correlation" />
-      <label for="Correlation">Correlation</label>
+      <label htmlFor="Correlation">Correlation</label>
       <input type="radio" id="Topic Modeling" onClick={(e) => handleChange(e.target.value)} name="3" value="Topic Modeling" />
-      <label for="Topic Modeling">Topic Modeling</label>
+      <label htmlFor="Topic Modeling">Topic Modeling</label>
       {/* <button id='sidebar-default-btn' onClick={()=>handleChange()}>General Models</button>
       <button onClick={()=>handleChange()}>Deep Learning</button>
       <button onClick={()=>handleChange()}>Correlation</button>

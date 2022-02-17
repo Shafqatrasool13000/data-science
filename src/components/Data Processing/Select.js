@@ -2,16 +2,17 @@ import * as React from 'react';
 
 import './Select.css'
 
-export default function Select() {
- 
+export default function Select({options}) {
+  
 
   return (
    
-    <select className='select' id="country" name="country">
-      <option value="australia">How</option>
-      <option value="canada">Left on</option>
-      <option value="usa">Right</option>
-    </select>
+    <select defaultValue={options[0]} className='select' id="country" name="country">
+      {options.map((value,index)=>(
+         <option key={index} value={value}>{value}</option>
+      ))}
+      
+    </select> 
     
   );
 }

@@ -4,6 +4,7 @@ import Select from '../Data Processing/Select';
  
 
 const GroupBy = () => {
+    const options=['Group by','Left on' ,'Right on'];
     return <Box color='#E7E7E7;'>
         <h4 className='model-heading-text'>
             Group By
@@ -14,7 +15,7 @@ const GroupBy = () => {
             </p>
         </Box>
         <Box mt='1.2rem' className='merge-2'>
-            <Select />
+            <Select options={options}/>
 
         </Box>
         <Box mt='2rem'>
@@ -24,7 +25,7 @@ const GroupBy = () => {
             </p>
         </Box>
         <Box mt='1.2rem' className='merge-2'>
-            <Select />
+            <Select options={options}/>
         </Box>
         <Box mt='2.4rem'>
 

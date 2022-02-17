@@ -94,5 +94,10 @@ a {
     line-height: 1.5rem;
     color: #E3E3E3;
   }
+  .nav-heading {
+    color: #d1d1d1;
+    font-size: 2.6rem;
+    
+  }
   
 }

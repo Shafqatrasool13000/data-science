@@ -4,16 +4,20 @@ import { Box} from '@mui/material';
 import './DataProcessing.css'
 import RadioScrollProcess from '../RadioButtonsScroll/RadioScrollProcess';
 
-export default function TransformRadioButtonsGroup() {
+export default function PipelineDetails({value,newLabels}) {
+    console.log(newLabels)
  
  
     return (
         <Box>
             <h2 className='data-transform-head' variant="h3" >
-                Data Transformations
+                {
+                    !newLabels ?' Data Transformations':newLabels.title
+                }
+               
             </h2>
             <Box mt='2rem'>
-            <RadioScrollProcess />
+            <RadioScrollProcess newLabels={newLabels}   />
             </Box>
         </Box>
     );

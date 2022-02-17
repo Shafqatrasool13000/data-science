@@ -16,7 +16,8 @@ const Navbar = () => {
       </Box>
       <ul className={styles["links"]} px='2rem'>
         <li><Link to="#">About</Link></li>
-        <li><Link to="use-cases">Use Cases</Link></li>
+        <li><Link to="/use-cases">Use Cases</Link></li>
+        <li><Link to="work-flows">Work Flows</Link></li>
         <li><Link to="#">Contact</Link></li>
         <Box ml={{
           xs:'1.5rem',lg:'0'

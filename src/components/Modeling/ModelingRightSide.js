@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Container, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import ButtonGroup from '../ButtonsGroup/ButtonGroup';
@@ -8,84 +8,90 @@ import RadioScrollModel from '../RadioButtonsScroll/RadioScrollModel';
 import TabsContainer from '../TabsContainer/TabsContainer';
 import Dual from './Dual';
 import ClassWeight from './ClassWeight';
+import SelectModel from './SelectModel';
 
 
-export const modelLabelContext=React.createContext();
-export const getValueContext=React.createContext();
+export const modelLabelContext = React.createContext();
+export const getValueContext = React.createContext();
 
 const ModelingRightSide = () => {
-  const [getMyComponent,setGetMyComponent]=useState(null)
- 
-  const dataTransforms = [
-   
-  {
-    title: 'Dual',
-    component: Dual
+  const options = ['Logistic Model', 'Support Vector Machine', 'Neural Network']
+  const [getMyComponent, setGetMyComponent] = useState(null);
+  const [radioComponent, setRadioComponent] = useState(null)
+  const [newLabels, setNewLabels] = useState(null)
 
-  },
-  {
-    title: 'ClassWeight',
-    component: ClassWeight
+  let [tabValue, setTabValue] = useState('')
 
+  const getTabValue = (value) => {
+    setTabValue(value)
+    console.log(value)
   }
+  const modelLabels = [
+    {
+      title: 'Logistic Model',
+      labels: [
+        'Penalty',
+        'Dual',
+        'Tolerance',
+        'Intercept Scaling',
+        'ClassWeight'
+      ]
+    },
+    {
+      title: 'Support Vector Machine',
+      labels: [
+        'C',
+        'Kernel',
+        'Degree',
+        'Gamma',
+        'coef0',
+      ]
+    },
+    {
+      title: 'Neural Network',
+      labels: [
+        ' Hidden Layer Sizes',
+        'Activation',
+        'Solver',
+        'Alpha',
+        'Batch Size',
+        'Learning Rate'
+      ]
+    }
+  ]
+  const dataTransforms = [
+
+    {
+      title: 'Dual',
+      component: Dual
+
+    },
+    {
+      title: 'ClassWeight',
+      component: ClassWeight
+
+    }
 
   ]
 
   const getValue = (value) => {
-   
+
     const result = dataTransforms.find((data) => value === data.title)
-    
+
     setGetMyComponent(result.component)
     console.log(getMyComponent)
-     
-    }
+
+  }
+
+  const getModelValue = (value) => {
+    const result = modelLabels.find((data) => value === data.title)
+
+    setNewLabels(result)
+  }
 
   const tabs = ['Numeric Variable', 'Categorical Variable', 'Target Variable']
-  const labels = [{
-
-    check:false,title:'Penalty'
-  },
-  {
-
-    check:true,title:'Dual'
-  },
-  {
-
-    check:false,title:'ClassWeight'
-  },
-  {
-
-    check:false,title:'C'
-  },
-  {
-
-    check:false,title:'Fit Intercept Scaling'
-  },{
-
-    check:false,title:'Fit Intercept Scaling'
-  },{
-
-    check:false,title:'Fit Intercept Scaling'
-  },{
-
-    check:false,title:'Fit Intercept Scaling'
-  },{
-
-    check:false,title:'Fit Intercept Scaling'
-  },{
-
-    check:false,title:'Fit Intercept Scaling'
-  },{
-
-    check:false,title:'Fit Intercept Scaling'
-  },{
-
-    check:false,title:'Fit Intercept Scaling'
-  },{
-
-    check:false,title:'Fit Intercept Scaling'
-  },
-    // 'Penalty', 'Dual', 'Tolerance', 'C', 'Fit Intercept Scaling', 'ClassWeight', 'Solver', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
+  const labels = [
+    'Penalty', 'Dual', 'Tolerance', 'C', 'Fit Intercept Scaling', 'ClassWeight', 'Solver', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
   ]
   return <Box id='modeling-right-side' mt='3rem'>
     <Container>
@@ -103,7 +109,7 @@ const ModelingRightSide = () => {
           </p>
         </Box>
         <Box mt='2.3rem'>
-          <TabsContainer tabs={tabs} />
+          <TabsContainer tabs={tabs} sendTabValue={getTabValue} />
         </Box>
         <Box mt='2rem'>
           <p className='model-subheading-text'>Select the appropriate for each variable type</p>
@@ -157,7 +163,7 @@ const ModelingRightSide = () => {
       <Box mt='2.3rem' className='model-subheading-text'>
         <p>Build a new model</p>
         <Box className='select-model'>
-          <Select />
+          <SelectModel sendModelValue={getModelValue} options={options} />
         </Box>
       </Box>
       <Box mt='2rem'>
@@ -170,9 +176,9 @@ const ModelingRightSide = () => {
           <Grid item xs={12} lg={6}>
             <Box>
               <modelLabelContext.Provider value={labels}>
-            <getValueContext.Provider value={getValue}>
-              <RadioScrollModel  />
-              </getValueContext.Provider>
+                <getValueContext.Provider value={getValue}>
+                  <RadioScrollModel newLabels={newLabels} />
+                </getValueContext.Provider>
               </modelLabelContext.Provider>
             </Box>
           </Grid>
@@ -181,12 +187,18 @@ const ModelingRightSide = () => {
               <p className='model-heading-text'>Update Parameter</p>
 
             </Box>
-           {!getMyComponent||getMyComponent==='undefined'?<Dual/>:getMyComponent}
+            {!getMyComponent || getMyComponent === 'undefined' ? <Dual /> : getMyComponent}
             <Box mt='2.5rem'>
               <button className='modal-small-text submit-btn'>Submit</button>
             </Box>
           </Grid>
         </Grid>
+      </Box>
+      <Box mt='4rem'>
+        <p className='model-heading-text'> Submit Model for Execution</p>
+      </Box>
+      <Box mt='2.5rem' >
+        <button className='modal-small-text submit-btn'>Submit</button>
       </Box>
     </Container>
   </Box>;;

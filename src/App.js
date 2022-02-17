@@ -12,6 +12,8 @@ import DataProcessBtns from './components/Data Processing/DataProcessBtns';
 import AuthenticateHomepage from './components/HomePage/AuthenticateHomepage';
 import Navbar from './components/Navbar/Navbar';
 import { useLocation } from 'react-router-dom';
+import UseCasesPage from './components/UseCasesPage/UseCasesPage';
+import Home from './components/Home/Home';
 
 
 function App() {
@@ -35,7 +37,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       {
-        location.pathname === '/use-cases' ?
+        location.pathname === '/work-flows'||  location.pathname === '/use-cases'||  location.pathname === '/work-flows/home'?
           <Navbar /> : ''
       }
       <Switch>
@@ -45,10 +47,16 @@ function App() {
         <Route path="/profile">
           <Homepage />
         </Route>
+        <Route path="/use-cases">
+          <UseCasesPage />
+        </Route>
         <Route exact path="/about">
           <AboutUs />
         </Route>
-        <Route exact path="/use-cases">
+        <Route exact path="/work-flows/:name">
+          <Home />
+        </Route>
+        <Route exact path="/work-flows">
           <DataProcessBtns />
         </Route>
         <Route exact path="/contact">
