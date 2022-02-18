@@ -12,7 +12,7 @@ import s6 from '../../assets/6.svg';
 const SimpleSlider=()=>  {
   
     var settings = {
-      dots: true,
+      dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 5,
