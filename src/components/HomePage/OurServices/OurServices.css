@@ -7,12 +7,12 @@
    z-index: 1;
    width: 100%;
   }
-  .our-service-main-inner{
+  /* .our-service-main-inner{
     height: 80px;
     background-color: white;
     margin-top: -89px;
     z-index: -1;
-  }
+  } */
  .our-services-container {
     height: 100%;
     display: flex;

@@ -29,12 +29,14 @@ const RadioScrollModel = ({ newLabels }) => {
     // }
 console.log(selectedValue,"selected Value")
 
-const [value, setValue] = React.useState(!newLabels?'C':selectedValue);
+const [value, setValue] = React.useState('Dual');
 
-const handleChange = (event) => {
-    setValue(event.target.value);
+const handleChange = (value) => {
+    setValue(value);
+    sendValue(value)
     
   };
+  
     return <Box className='radio-button-main'>
 <FormControl>
 <RadioGroup
@@ -45,10 +47,10 @@ const handleChange = (event) => {
 >
     {
         !newLabels?labels.map((value, index) =>(
-            <FormControlLabel key={index} value={value} control={<Radio />} label={value} />
+            <FormControlLabel key={index} value={value} control={<Radio value={value} />} label={value} />
         )):(
             newLabels.labels.map((value, index) => (
-                <FormControlLabel key={index} key={index} className='radio-label' value={value} control={<Radio name='radio-scroll-model' value={value} onChange={(event) => handleChange(event.target.value)} color="primary" />} sx={{
+                <FormControlLabel key={index}  className='radio-label' value={value} control={<Radio name='radio-scroll-model' value={value}  onChange={() => handleChange(value)} color="primary" />} sx={{
                     fontSize: '1.6rem'
                 }} label={value} />
             )

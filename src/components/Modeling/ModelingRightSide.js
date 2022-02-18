@@ -9,6 +9,10 @@ import TabsContainer from '../TabsContainer/TabsContainer';
 import Dual from './Dual';
 import ClassWeight from './ClassWeight';
 import SelectModel from './SelectModel';
+import C from './C';
+import HiddenLayerSizes from './HiddenLayerSizes';
+import Activation from './Activation';
+import Kernal from './Kernal';
 
 
 export const modelLabelContext = React.createContext();
@@ -30,11 +34,11 @@ const ModelingRightSide = () => {
     {
       title: 'Logistic Model',
       labels: [
-        'Penalty',
+        'ClassWeight',
         'Dual',
+        'Penalty',
         'Tolerance',
         'Intercept Scaling',
-        'ClassWeight'
       ]
     },
     {
@@ -50,7 +54,7 @@ const ModelingRightSide = () => {
     {
       title: 'Neural Network',
       labels: [
-        ' Hidden Layer Sizes',
+        'Hidden Layer Sizes',
         'Activation',
         'Solver',
         'Alpha',
@@ -70,8 +74,24 @@ const ModelingRightSide = () => {
       title: 'ClassWeight',
       component: ClassWeight
 
-    }
+    },
+    {
+      title: 'Kernel',
+      component: Kernal
 
+    }, {
+      title: 'Activation',
+      component: Activation
+
+    }, {
+      title: 'Hidden Layer Sizes',
+      component: HiddenLayerSizes
+
+    }, {
+      title: 'C',
+      component: C
+
+    },
   ]
 
   const getValue = (value) => {
@@ -79,19 +99,18 @@ const ModelingRightSide = () => {
     const result = dataTransforms.find((data) => value === data.title)
 
     setGetMyComponent(result.component)
-    console.log(getMyComponent)
+    
 
   }
 
   const getModelValue = (value) => {
     const result = modelLabels.find((data) => value === data.title)
-
     setNewLabels(result)
   }
 
   const tabs = ['Numeric Variable', 'Categorical Variable', 'Target Variable']
   const labels = [
-    'Penalty', 'Dual', 'Tolerance', 'C', 'Fit Intercept Scaling', 'ClassWeight', 'Solver', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
+    'ClassWeight', 'Dual', 'Penalty', 'Tolerance', 'C', 'Fit Intercept Scaling', 'Solver', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
   ]
   return <Box id='modeling-right-side' mt='3rem'>
     <Container>

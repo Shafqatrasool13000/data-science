@@ -14,7 +14,6 @@ const Homepage = () => {
     return <>
         <Header />
         <AboutUs/>   
-        <OurServices />
         <UseCases />
         <ContactUs />   
         <Footer/>
