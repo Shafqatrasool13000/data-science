@@ -25,7 +25,7 @@ const history=useHistory()
         <li><Link to="work-flows">Work Flows</Link></li>
         <li><Link to="#">Contact</Link></li>
       </ul>
-    <Box display={{xs:'none',md:'block'}} mt='0.5rem'>
+    <Box display={{xs:'none',lg:'block'}} mt='0.5rem'>
     
      <button onClick={()=>moveToHome()} variant="contained" className='btn-blue'>
         Profile
@@ -33,7 +33,7 @@ const history=useHistory()
     </Box>
     
       <Box display='flex' alignItems='center'>
-        <Box display={{xs:'block',md:'none'}} mr='1.5rem'>
+        <Box display={{xs:'block',lg:'none'}} mr='1.5rem'>
 
       <button onClick={()=>moveToHome()} variant="contained" className='btn-blue'>
         Profile

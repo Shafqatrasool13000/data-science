@@ -22,7 +22,7 @@ const Navbar = () => {
         <Box ml={{
           xs:'1.5rem',lg:'0'
         }} display={{
-        xs:'flex',md:'none'
+        xs:'flex',lg:'none'
       }}
        columnGap={{
         xs:'0',lg:'2rem'
@@ -47,7 +47,7 @@ const Navbar = () => {
       </Box>
       </ul>
       <Box display={{
-        xs:'none',md:'flex'
+        xs:'none',lg:'flex'
       }}  columnGap='2rem' rowGap='2rem'>
         <Link to='/profile'>
           <button variant="contained"

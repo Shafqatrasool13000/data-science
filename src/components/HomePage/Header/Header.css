@@ -1,9 +1,10 @@
 #hero-main {
-  background-image: url("../../../assets/banner.svg");
+  background-image: url("../../../assets/banner.png");
   background-repeat: no-repeat;
   height: 100vh;
-  background-size: cover;
+  background-size: 100% 100%;
   position: relative;
+  object-fit: cover;
   /* clip-path: polygon(0% 0%, 0% 100%, 28% 100%, 29% 100%, 100% 89%, 100% 0%); */
  
 }
@@ -22,7 +23,7 @@
 }
 .hero-img-container1{
   position: absolute;
-  bottom: 8rem;
+  bottom: 12rem;
   right: 6.2rem;
  
  }
