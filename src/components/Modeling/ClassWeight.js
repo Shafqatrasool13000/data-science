@@ -15,7 +15,7 @@ const ClassWeight = () => {
                 <Box mt='1.2rem' className='select-model2'>
                     <Select options={options} />
                 </Box>
-                <p className='modal-small-text line-Spacing'>Dual or primal formulation. Dual formulation is only implemented for 12 penalty with liblinear solver. Prefer dual=False when n_samples  n_features</p>
+                <p className='modal-small-text line-Spacing'>The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as n_samples / (n_classes * np.bincount(y)).</p>
             </Box>
         </>
     )

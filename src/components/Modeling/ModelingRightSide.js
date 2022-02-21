@@ -9,10 +9,11 @@ import TabsContainer from '../TabsContainer/TabsContainer';
 import Dual from './Dual';
 import ClassWeight from './ClassWeight';
 import SelectModel from './SelectModel';
-import C from './C';
+import C from './Gamma';
 import HiddenLayerSizes from './HiddenLayerSizes';
 import Activation from './Activation';
 import Kernal from './Kernal';
+import Gamma from './Gamma';
 
 
 export const modelLabelContext = React.createContext();
@@ -34,21 +35,34 @@ const ModelingRightSide = () => {
     {
       title: 'Logistic Model',
       labels: [
-        'ClassWeight',
         'Dual',
+        'Class Weight',
         'Penalty',
         'Tolerance',
+        'C',
+        'Fit Intercept',
         'Intercept Scaling',
+        'Solver',
+        'Max Iterations',
+        'Multi Class',
+        'Warm Start',
+        'L1 Ratio'
       ]
     },
     {
       title: 'Support Vector Machine',
       labels: [
-        'C',
         'Kernel',
-        'Degree',
         'Gamma',
+        'C',
+        'Degree',
         'coef0',
+        'Shrinking',
+        'Probability',
+        'Tolerance',
+        'Decision Function Shape',
+        'Class Weight',
+        'Break Ties'
       ]
     },
     {
@@ -59,7 +73,23 @@ const ModelingRightSide = () => {
         'Solver',
         'Alpha',
         'Batch Size',
-        'Learning Rate'
+        'Learning Rate',
+        'Learning Rate Init',
+        'Power T',
+        'Max Iterations',
+        'Shuffle',
+        'Random State',
+        'Tolerance',
+        'Warm Start',
+        'Momentum',
+        'Nesterovs Momentum',
+        'Early Stopping',
+        'Validation Fraction',
+        'Beta 1',
+        'Beta 2',
+        'Epsilon',
+        'Max Number of Epochs',
+        'Max Function'
       ]
     }
   ]
@@ -71,7 +101,7 @@ const ModelingRightSide = () => {
 
     },
     {
-      title: 'ClassWeight',
+      title: 'Class Weight',
       component: ClassWeight
 
     },
@@ -88,8 +118,8 @@ const ModelingRightSide = () => {
       component: HiddenLayerSizes
 
     }, {
-      title: 'C',
-      component: C
+      title: 'Gamma',
+      component: Gamma
 
     },
   ]
@@ -99,7 +129,7 @@ const ModelingRightSide = () => {
     const result = dataTransforms.find((data) => value === data.title)
 
     setGetMyComponent(result.component)
-    
+
 
   }
 
@@ -110,7 +140,18 @@ const ModelingRightSide = () => {
 
   const tabs = ['Numeric Variable', 'Categorical Variable', 'Target Variable']
   const labels = [
-    'ClassWeight', 'Dual', 'Penalty', 'Tolerance', 'C', 'Fit Intercept Scaling', 'Solver', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
+    'Dual',
+    'Class Weight',
+    'Penalty',
+    'Tolerance',
+    'C',
+    'Fit Intercept',
+    'Intercept Scaling',
+    'Solver',
+    'Max Iterations',
+    'Multi Class',
+    'Warm Start',
+    'L1 Ratio'
   ]
   return <Box id='modeling-right-side' mt='3rem'>
     <Container>
@@ -189,8 +230,6 @@ const ModelingRightSide = () => {
         <p className='model-heading-text'>Model Parameters</p>
       </Box>
       <Box mt='2.3rem'>
-
-
         <Grid container columnSpacing={3} rowSpacing={3}>
           <Grid item xs={12} lg={6}>
             <Box>
@@ -207,9 +246,7 @@ const ModelingRightSide = () => {
 
             </Box>
             {!getMyComponent || getMyComponent === 'undefined' ? <Dual /> : getMyComponent}
-            <Box mt='2.5rem'>
-              <button className='modal-small-text submit-btn'>Submit</button>
-            </Box>
+           
           </Grid>
         </Grid>
       </Box>

@@ -15,7 +15,7 @@ const Kernal = () => {
                 <Box mt='1.2rem' className='select-model2'>
                     <Select options={options} />
                 </Box>
-                <p className='modal-small-text line-Spacing'>Dual or primal formulation. Dual formulation is only implemented for 12 penalty with liblinear solver. Prefer dual=False when n_samples  n_features</p>
+                <p className='modal-small-text line-Spacing'>Specifies the kernel type to be used in the algorithm. It must be one of ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’ or a callable. If none is given, ‘rbf’ will be used. If a callable is given it is used to pre-compute the kernel matrix from data matrices; that matrix should be an array of shape (n_samples, n_samples).</p>
             </Box>
         </>
     )

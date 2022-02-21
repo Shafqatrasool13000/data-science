@@ -29,76 +29,36 @@ const RadioScrollModel = ({ newLabels }) => {
     // }
 console.log(selectedValue,"selected Value")
 
-const [value, setValue] = React.useState('Dual');
 
 const handleChange = (value) => {
-    setValue(value);
     sendValue(value)
     
   };
   
-    return <Box className='radio-button-main'>
-<FormControl>
-<RadioGroup
-  aria-labelledby="demo-controlled-radio-buttons-group"
-  name="controlled-radio-buttons-group"
-  value={value}
-  onChange={handleChange}
->
+    return (
+        <Box className='radio-button-main'>
     {
         !newLabels?labels.map((value, index) =>(
-            <FormControlLabel key={index} value={value} control={<Radio value={value} />} label={value} />
-        )):(
-            newLabels.labels.map((value, index) => (
-                <FormControlLabel key={index}  className='radio-label' value={value} control={<Radio name='radio-scroll-model' value={value}  onChange={() => handleChange(value)} color="primary" />} sx={{
-                    fontSize: '1.6rem'
-                }} label={value} />
-            )
-        )
-        )
+            <Box mt='2.2rem' display='flex' alignItems='center'>
+            <label class="container">{value}
+  <input value={value} onChange={(event)=>handleChange(event.target.value)} type="radio"  name="radio"/>
+  <span class="checkmark"></span>
+</label>
+</Box>
+        )):
+
+        newLabels.labels.map((value, index) =>(
+            <Box mt='2.2rem' display='flex' alignItems='center'>
+            <label class="container">{value}
+  <input value={value} onChange={(event)=>handleChange(event.target.value)} type="radio"  name="radio"/>
+  <span class="checkmark"></span>
+</label>
+</Box>)
+        )       
 
     }
-
-</RadioGroup>
-</FormControl>
-
-
-
-
-
-
-
-
-        {/* <FormControl  >
-            <RadioGroup 
-
-                aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue={'Dual'}
-                name="radio-buttons-group"
-            >{
-                    !newLabels ? (
-                        labels.map((value, index) => (
-                            <FormControlLabel key={index} className='radio-label' value={value} control={<Radio defaultValue='Dual' name='radio-scroll-model' value={!selectedValue ? value : selectedValue} onChange={(event) => handleChange(event.target.value)} color="primary" />} sx={{
-                                fontSize: '1.6rem'
-                            }} label={value} />
-                        )
-
-                        )
-                    ) : (
-                        newLabels.labels.map((value, index) => (
-                            <FormControlLabel key={index} className='radio-label' value={value} control={<Radio name='radio-scroll-model' value={value} onChange={(event) => handleChange(event.target.value)} color="primary" />} sx={{
-                                fontSize: '1.6rem'
-                            }} label={value} />
-                        )
-
-                        )
-                    )
-                }
-
-            </RadioGroup>
-        </FormControl> */}
-
-    </Box>;
+    </Box>
+    )
 };
 
 

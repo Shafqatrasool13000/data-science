@@ -28,7 +28,7 @@ const DataProcessing = () => {
         {
             title: 'Transformations',
             labels: [
-                'Concat', 'Cut', 'Group By', 'Merge Datasets', 'Melt', 'Shift', 'Pivot', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
+                'Group By','Merge Datasets','Concat', 'Cut',   'Melt', 'Shift', 'Pivot', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
             ]
         },
         {
@@ -65,7 +65,7 @@ const DataProcessing = () => {
     console.log(labelComponent)
     const tabs = ['Cleaning', 'Transformations', 'Calculations', 'Text Processing', 'Custom']
     const labels = [
-        'Concat', 'Cut', 'Group By', 'Merge Datasets', 'Melt', 'Shift', 'Pivot', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
+        'Group By','Merge Datasets','Concat', 'Cut',   'Melt', 'Shift', 'Pivot', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 'Other',
     ]
     const dataTransforms = [{
         title: 'Group By',
@@ -118,7 +118,8 @@ const DataProcessing = () => {
                                 <PipelineDetails value={tabValue} newLabels={labelComponent} />
                             </getProcessValueContext.Provider>
                         </ProcessLabelContext.Provider>
-                        <Box mt='4rem'>
+                      <Box display={{xs:'none',md:'unset'}}>
+                      <Box mt='4rem'>
                             <p className='model-heading-text'> Preview</p>
                       
                         <Box mt='2.5rem' display='flex' >
@@ -143,10 +144,37 @@ const DataProcessing = () => {
                             
                         </Box>
                         </Box>
+                      </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         {!getMyComponent || getMyComponent === 'undefined' ? <GroupBy /> : getMyComponent}
-
+                        <Box display={{xs:'unset',md:'none'}}>
+                      <Box mt='4rem'>
+                            <p className='model-heading-text'> Preview</p>
+                      
+                        <Box mt='2.5rem' display='flex' >
+                            <button className='modal-small-text submit-btn' >Preview</button>
+                            <Box ml='2rem' >
+                            <button px='2rem' className='modal-small-text submit-btn'>Hide</button>
+                            </Box>
+                        </Box>
+                        </Box>
+                        <Box mt='4rem'>     
+                            <p className='model-heading-text'> Pipeline</p>
+                        <Box mt='2.5rem' >
+                            <button className='modal-small-text submit-btn' >Show</button>   
+                        </Box>
+                        </Box>
+                        <Box>     
+                        <Box mt='4rem'>
+                            <p className='model-heading-text'>Save & Submit</p>
+                        </Box>
+                        <Box mt='2.5rem' >
+                            <button className='modal-small-text submit-btn' >Submit</button>
+                            
+                        </Box>
+                        </Box>
+                      </Box>
                     </Grid>
                 </Grid>
             </Box>
