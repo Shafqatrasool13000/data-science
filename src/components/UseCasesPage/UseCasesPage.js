@@ -4,6 +4,7 @@ import React from 'react'
 import BlueLine from '../Blue Line/BlueLine';
 import styles from '../Data Processing/home.module.scss';
 import '../Data Processing/DataProcessing.css';
+import Footer2 from '../HomePage/Footer/Footer2';
 
 const UseCasesPage = () => {
     const useCases = ['Use Case 1', 'Use Case 2', 'Use Case 3']
@@ -47,7 +48,7 @@ const UseCasesPage = () => {
                     ))
                 }
             </Container>
-
+<Footer2/>
         </Box>
 
     )

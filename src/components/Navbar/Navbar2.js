@@ -51,9 +51,9 @@ const Navbar = () => {
       }}  columnGap='2rem' rowGap='2rem'>
         <Link to='/profile'>
           <button variant="contained"
-            className='save-btn'
+            className='login-btn'
           >
-            Login
+            Log in
           </button>
         </Link>
         <button variant="contained"

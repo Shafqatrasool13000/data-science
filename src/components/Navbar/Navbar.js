@@ -22,7 +22,7 @@ const history=useHistory()
       <ul className={styles["links"]}>
         <li><Link to="#">About</Link></li>
         <li><Link to="/use-cases">Use Cases</Link></li>
-        <li><Link to="work-flows">Work Flows</Link></li>
+        <li><Link to="/work-flows">Work Flows</Link></li>
         <li><Link to="#">Contact</Link></li>
       </ul>
     <Box display={{xs:'none',lg:'block'}} mt='0.5rem'>

@@ -161,7 +161,7 @@ const ModelingRightSide = () => {
         </h4>
       </Box>
       <LoadData />
-      <Box mt='3rem'>
+      <Box mt='8rem'>
         <h3 className='model-heading-text'>Specify Key Variables</h3>
         <Box mt='2.3rem'>
           <p className='model-subheading-text'>
@@ -213,7 +213,7 @@ const ModelingRightSide = () => {
           </Grid>
         </Box>
       </Box>
-      <Box mt='3rem'>
+      <Box mt='8rem'>
         <p className='model-heading-text'>Select Model</p>
       </Box>
       <Box mt='2rem'>
@@ -226,7 +226,7 @@ const ModelingRightSide = () => {
           <SelectModel sendModelValue={getModelValue} options={options} />
         </Box>
       </Box>
-      <Box mt='2rem'>
+      <Box mt='8rem'>
         <p className='model-heading-text'>Model Parameters</p>
       </Box>
       <Box mt='2.3rem'>
@@ -250,7 +250,7 @@ const ModelingRightSide = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box mt='4rem'>
+      <Box mt='8rem'>
         <p className='model-heading-text'> Submit Model for Execution</p>
       </Box>
       <Box mt='2.5rem' >
